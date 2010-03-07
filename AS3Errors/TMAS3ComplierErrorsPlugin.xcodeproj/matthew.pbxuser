@@ -1,0 +1,85 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = 8D5B49AC048680CD000E48DA /* TMAS3ComplierErrorsPlugin */;
+		addToTargets = (
+			8D5B49AC048680CD000E48DA /* TMAS3ComplierErrorsPlugin */,
+		);
+		codeSenseManager = 3499C4C811436C6F00776DD2 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 289631329;
+			PBXWorkspaceStateSaveDate = 289631329;
+		};
+		perUserProjectItems = {
+			3499C4C211436C6F00776DD2 /* PBXBookmark */ = 3499C4C211436C6F00776DD2 /* PBXBookmark */;
+			3499C4C311436C6F00776DD2 /* PBXTextBookmark */ = 3499C4C311436C6F00776DD2 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 3499C4C711436C6F00776DD2 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	3499C4C211436C6F00776DD2 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 74AEC1B31143576900B31661 /* CompilerMessage.m */;
+	};
+	3499C4C311436C6F00776DD2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74AEC1B31143576900B31661 /* CompilerMessage.m */;
+		name = "CompilerMessage.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 329;
+		vrLoc = 0;
+	};
+	3499C4C711436C6F00776DD2 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	3499C4C811436C6F00776DD2 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	74AEC1B31143576900B31661 /* CompilerMessage.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CompilerMessage.m;
+		path = "/Users/matthew/as3CompilerErrors-tmplugin/AS3Errors/classes/helpers/CompilerMessage.m";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {942, 560}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 329}";
+		};
+	};
+	8D5B49AC048680CD000E48DA /* TMAS3ComplierErrorsPlugin */ = {
+		activeExec = 0;
+	};
+}
