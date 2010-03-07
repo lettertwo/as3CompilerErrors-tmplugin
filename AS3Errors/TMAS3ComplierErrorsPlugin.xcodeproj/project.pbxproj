@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3499C5EC114386FD00776DD2 /* CategoryNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C5E5114386FD00776DD2 /* CategoryNode.m */; };
-		3499C5ED114386FD00776DD2 /* CompilerMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C5E6114386FD00776DD2 /* CompilerMessage.m */; };
-		3499C5EE114386FD00776DD2 /* MessageNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C5E8114386FD00776DD2 /* MessageNode.m */; };
-		3499C5EF114386FD00776DD2 /* OutlineViewNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C5EA114386FD00776DD2 /* OutlineViewNode.m */; };
+		3499C63C11438ECE00776DD2 /* CategoryNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C63511438ECE00776DD2 /* CategoryNode.m */; };
+		3499C63D11438ECE00776DD2 /* CompilerMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C63711438ECE00776DD2 /* CompilerMessage.m */; };
+		3499C63E11438ECE00776DD2 /* MessageNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C63911438ECE00776DD2 /* MessageNode.m */; };
+		3499C63F11438ECE00776DD2 /* OutlineViewNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C63B11438ECE00776DD2 /* OutlineViewNode.m */; };
+		3499C64F11438EF500776DD2 /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C64811438EF500776DD2 /* CategoryCell.m */; };
+		3499C65011438EF500776DD2 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C64A11438EF500776DD2 /* MessageCell.m */; };
+		3499C65111438EF500776DD2 /* MessagesTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C64C11438EF500776DD2 /* MessagesTable.m */; };
+		3499C65211438EF500776DD2 /* MessagesTableColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C64E11438EF500776DD2 /* MessagesTableColumn.m */; };
+		3499C65E11438F8F00776DD2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3499C65D11438F8F00776DD2 /* MainMenu.xib */; };
 		74AEC1BF1143576900B31661 /* Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1A31143576900B31661 /* Main.m */; };
 		74AEC1C01143576900B31661 /* CompilerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1A61143576900B31661 /* CompilerController.m */; };
 		74AEC1C11143576900B31661 /* ConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1A81143576900B31661 /* ConsoleViewController.m */; };
@@ -32,14 +37,23 @@
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCF630370AF2F00C91783 /* TMAS3ComplierErrorsPlugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMAS3ComplierErrorsPlugin_Prefix.pch; sourceTree = "<group>"; };
-		3499C5E4114386FD00776DD2 /* CategoryNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryNode.h; path = ../../crap/AS3Errors/classes/models/CategoryNode.h; sourceTree = SOURCE_ROOT; };
-		3499C5E5114386FD00776DD2 /* CategoryNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryNode.m; path = ../../crap/AS3Errors/classes/models/CategoryNode.m; sourceTree = SOURCE_ROOT; };
-		3499C5E6114386FD00776DD2 /* CompilerMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompilerMessage.m; path = ../../crap/AS3Errors/classes/models/CompilerMessage.m; sourceTree = SOURCE_ROOT; };
-		3499C5E7114386FD00776DD2 /* MessageNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageNode.h; path = ../../crap/AS3Errors/classes/models/MessageNode.h; sourceTree = SOURCE_ROOT; };
-		3499C5E8114386FD00776DD2 /* MessageNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageNode.m; path = ../../crap/AS3Errors/classes/models/MessageNode.m; sourceTree = SOURCE_ROOT; };
-		3499C5E9114386FD00776DD2 /* OutlineViewNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OutlineViewNode.h; path = ../../crap/AS3Errors/classes/models/OutlineViewNode.h; sourceTree = SOURCE_ROOT; };
-		3499C5EA114386FD00776DD2 /* OutlineViewNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OutlineViewNode.m; path = ../../crap/AS3Errors/classes/models/OutlineViewNode.m; sourceTree = SOURCE_ROOT; };
-		3499C5EB114386FD00776DD2 /* CompilerMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompilerMessage.h; path = ../../crap/AS3Errors/classes/models/CompilerMessage.h; sourceTree = SOURCE_ROOT; };
+		3499C63411438ECE00776DD2 /* CategoryNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryNode.h; sourceTree = "<group>"; };
+		3499C63511438ECE00776DD2 /* CategoryNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryNode.m; sourceTree = "<group>"; };
+		3499C63611438ECE00776DD2 /* CompilerMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompilerMessage.h; sourceTree = "<group>"; };
+		3499C63711438ECE00776DD2 /* CompilerMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompilerMessage.m; sourceTree = "<group>"; };
+		3499C63811438ECE00776DD2 /* MessageNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageNode.h; sourceTree = "<group>"; };
+		3499C63911438ECE00776DD2 /* MessageNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageNode.m; sourceTree = "<group>"; };
+		3499C63A11438ECE00776DD2 /* OutlineViewNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewNode.h; sourceTree = "<group>"; };
+		3499C63B11438ECE00776DD2 /* OutlineViewNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewNode.m; sourceTree = "<group>"; };
+		3499C64711438EF500776DD2 /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
+		3499C64811438EF500776DD2 /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
+		3499C64911438EF500776DD2 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		3499C64A11438EF500776DD2 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		3499C64B11438EF500776DD2 /* MessagesTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesTable.h; sourceTree = "<group>"; };
+		3499C64C11438EF500776DD2 /* MessagesTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesTable.m; sourceTree = "<group>"; };
+		3499C64D11438EF500776DD2 /* MessagesTableColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesTableColumn.h; sourceTree = "<group>"; };
+		3499C64E11438EF500776DD2 /* MessagesTableColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesTableColumn.m; sourceTree = "<group>"; };
+		3499C65D11438F8F00776DD2 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		7475F78B113B2CD2006C1F74 /* Untitled-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Untitled-Info.plist"; sourceTree = "<group>"; };
 		74AEC1A21143576900B31661 /* Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Main.h; sourceTree = "<group>"; };
 		74AEC1A31143576900B31661 /* Main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Main.m; sourceTree = "<group>"; };
@@ -135,9 +149,25 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		3499C64611438EF500776DD2 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				3499C64711438EF500776DD2 /* CategoryCell.h */,
+				3499C64811438EF500776DD2 /* CategoryCell.m */,
+				3499C64911438EF500776DD2 /* MessageCell.h */,
+				3499C64A11438EF500776DD2 /* MessageCell.m */,
+				3499C64B11438EF500776DD2 /* MessagesTable.h */,
+				3499C64C11438EF500776DD2 /* MessagesTable.m */,
+				3499C64D11438EF500776DD2 /* MessagesTableColumn.h */,
+				3499C64E11438EF500776DD2 /* MessagesTableColumn.m */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		74AEC1A01143576900B31661 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				3499C64611438EF500776DD2 /* views */,
 				74AEC1A11143576900B31661 /* appDelegate */,
 				74AEC1A41143576900B31661 /* controllers */,
 				74AEC1AF1143576900B31661 /* helpers */,
@@ -187,14 +217,14 @@
 		74AEC1B61143576900B31661 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				3499C5E4114386FD00776DD2 /* CategoryNode.h */,
-				3499C5E5114386FD00776DD2 /* CategoryNode.m */,
-				3499C5E6114386FD00776DD2 /* CompilerMessage.m */,
-				3499C5E7114386FD00776DD2 /* MessageNode.h */,
-				3499C5E8114386FD00776DD2 /* MessageNode.m */,
-				3499C5E9114386FD00776DD2 /* OutlineViewNode.h */,
-				3499C5EA114386FD00776DD2 /* OutlineViewNode.m */,
-				3499C5EB114386FD00776DD2 /* CompilerMessage.h */,
+				3499C63411438ECE00776DD2 /* CategoryNode.h */,
+				3499C63511438ECE00776DD2 /* CategoryNode.m */,
+				3499C63611438ECE00776DD2 /* CompilerMessage.h */,
+				3499C63711438ECE00776DD2 /* CompilerMessage.m */,
+				3499C63811438ECE00776DD2 /* MessageNode.h */,
+				3499C63911438ECE00776DD2 /* MessageNode.m */,
+				3499C63A11438ECE00776DD2 /* OutlineViewNode.h */,
+				3499C63B11438ECE00776DD2 /* OutlineViewNode.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -219,6 +249,7 @@
 		74AEC1D2114357BE00B31661 /* nib */ = {
 			isa = PBXGroup;
 			children = (
+				3499C65D11438F8F00776DD2 /* MainMenu.xib */,
 				74AEC1D3114357BE00B31661 /* CompilerErrors.nib */,
 			);
 			path = nib;
@@ -290,6 +321,7 @@
 				74AEC1FA11435AEB00B31661 /* fcshctl in Resources */,
 				74AEC1FB11435AEB00B31661 /* fcshctl-mxmlc in Resources */,
 				74AEC1FC11435AEB00B31661 /* fcshctl-mxmlc-ni in Resources */,
+				3499C65E11438F8F00776DD2 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,10 +341,14 @@
 				74AEC1C51143576900B31661 /* Compiler.m in Sources */,
 				74AEC1C71143576900B31661 /* OutputParser.m in Sources */,
 				74AEC20311435BD700B31661 /* RegexKitLite.m in Sources */,
-				3499C5EC114386FD00776DD2 /* CategoryNode.m in Sources */,
-				3499C5ED114386FD00776DD2 /* CompilerMessage.m in Sources */,
-				3499C5EE114386FD00776DD2 /* MessageNode.m in Sources */,
-				3499C5EF114386FD00776DD2 /* OutlineViewNode.m in Sources */,
+				3499C63C11438ECE00776DD2 /* CategoryNode.m in Sources */,
+				3499C63D11438ECE00776DD2 /* CompilerMessage.m in Sources */,
+				3499C63E11438ECE00776DD2 /* MessageNode.m in Sources */,
+				3499C63F11438ECE00776DD2 /* OutlineViewNode.m in Sources */,
+				3499C64F11438EF500776DD2 /* CategoryCell.m in Sources */,
+				3499C65011438EF500776DD2 /* MessageCell.m in Sources */,
+				3499C65111438EF500776DD2 /* MessagesTable.m in Sources */,
+				3499C65211438EF500776DD2 /* MessagesTableColumn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

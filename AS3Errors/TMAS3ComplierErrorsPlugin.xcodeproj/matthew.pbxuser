@@ -15,7 +15,7 @@
 					20,
 					341,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 					20,
@@ -30,30 +30,16 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 289631329;
-			PBXWorkspaceStateSaveDate = 289631329;
+			PBXPerProjectTemplateStateSaveDate = 289640110;
+			PBXWorkspaceStateSaveDate = 289640110;
 		};
 		perUserProjectItems = {
-			3499C4C211436C6F00776DD2 /* PBXBookmark */ = 3499C4C211436C6F00776DD2 /* PBXBookmark */;
-			3499C4C311436C6F00776DD2 /* PBXTextBookmark */ = 3499C4C311436C6F00776DD2 /* PBXTextBookmark */;
+			3499C64111438EEA00776DD2 /* PBXTextBookmark */ = 3499C64111438EEA00776DD2 /* PBXTextBookmark */;
+			3499C66311438FD200776DD2 /* PBXTextBookmark */ = 3499C66311438FD200776DD2 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 3499C4C711436C6F00776DD2 /* Source Control */;
 		userBuildSettings = {
 		};
-	};
-	3499C4C211436C6F00776DD2 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 74AEC1B31143576900B31661 /* CompilerMessage.m */;
-	};
-	3499C4C311436C6F00776DD2 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 74AEC1B31143576900B31661 /* CompilerMessage.m */;
-		name = "CompilerMessage.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 329;
-		vrLoc = 0;
 	};
 	3499C4C711436C6F00776DD2 /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -66,17 +52,85 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	74AEC1B31143576900B31661 /* CompilerMessage.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CompilerMessage.m;
-		path = "/Users/matthew/as3CompilerErrors-tmplugin/AS3Errors/classes/helpers/CompilerMessage.m";
-		sourceTree = "<absolute>";
+	3499C63411438ECE00776DD2 /* CategoryNode.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {942, 560}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1131, 642}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 329}";
+			sepNavVisRange = "{0, 319}";
+		};
+	};
+	3499C63511438ECE00776DD2 /* CategoryNode.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1131, 642}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 364}";
+		};
+	};
+	3499C63611438ECE00776DD2 /* CompilerMessage.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1131, 642}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 788}";
+		};
+	};
+	3499C63711438ECE00776DD2 /* CompilerMessage.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1131, 642}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 845}";
+		};
+	};
+	3499C63811438ECE00776DD2 /* MessageNode.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1131, 642}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 363}";
+		};
+	};
+	3499C63911438ECE00776DD2 /* MessageNode.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1131, 642}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 441}";
+		};
+	};
+	3499C63A11438ECE00776DD2 /* OutlineViewNode.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1131, 642}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 504}";
+		};
+	};
+	3499C63B11438ECE00776DD2 /* OutlineViewNode.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1131, 938}}";
+			sepNavSelRange = "{328, 0}";
+			sepNavVisRange = "{0, 644}";
+		};
+	};
+	3499C64111438EEA00776DD2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: MessageCell.h: No such file or directory";
+		fRef = 74AEC1AA1143576900B31661 /* ErrorsViewController.m */;
+		rLen = 1;
+		rLoc = 10;
+		rType = 1;
+	};
+	3499C66311438FD200776DD2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74AEC1AA1143576900B31661 /* ErrorsViewController.m */;
+		name = "ErrorsViewController.m: 6";
+		rLen = 0;
+		rLoc = 120;
+		rType = 0;
+		vrLen = 367;
+		vrLoc = 0;
+	};
+	74AEC1AA1143576900B31661 /* ErrorsViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {439, 1974}}";
+			sepNavSelRange = "{214, 24}";
+			sepNavVisRange = "{0, 315}";
 		};
 	};
 	8D5B49AC048680CD000E48DA /* TMAS3ComplierErrorsPlugin */ = {
