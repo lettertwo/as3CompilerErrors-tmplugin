@@ -52,7 +52,6 @@
 			[[self dataSource] addObject: categoryNode];
 		}
 		[categoryNode addChild: [[MessageNode alloc] initWithMessage: msg]];
-		NSLog(@"ERROR:%@ ", msg);
 	}
 
 	[view reloadData];
@@ -67,10 +66,7 @@
 - (void)outlineView:(NSOutlineView *)outlineView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item
 {
 	if ([cell isKindOfClass:[MessageCell class]])
-	{
-NSLog(@"SETTING DS TO %@", item);
 		[cell setDataSource:item];
-	}
 }
 
 

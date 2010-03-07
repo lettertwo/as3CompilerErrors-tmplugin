@@ -27,7 +27,6 @@
 
 - (NSInteger)indexOfChild:(OutlineViewNode*)child
 {
-	NSLog(@"::::%d", [children indexOfObject:child]);
 	return [children indexOfObject:child];
 }
 
@@ -56,7 +55,6 @@
 
 - (OutlineViewNode*)childAtIndex:(NSInteger)n 
 {
-	NSLog(@"getting child at index %d from a total number of %d.", n, [children count]);
     return [children objectAtIndex: n];
 }
 
