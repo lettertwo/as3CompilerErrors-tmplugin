@@ -68,7 +68,7 @@
 		745C18EA11419399005CF819 /* CompilerMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompilerMessage.h; sourceTree = "<group>"; };
 		7475F771113B2C7D006C1F74 /* CompilerErrors.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = CompilerErrors.nib; sourceTree = "<group>"; };
 		7475F78B113B2CD2006C1F74 /* Untitled-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Untitled-Info.plist"; sourceTree = "<group>"; };
-		8D5B49B6048680CD000E48DA /* TMAS3ComplierErrorsPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMAS3ComplierErrorsPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B6048680CD000E48DA /* as3CompilerErrors.tmplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = as3CompilerErrors.tmplugin; path = build/Debug/as3CompilerErrors.tmplugin; sourceTree = "<group>"; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -167,7 +167,7 @@
 		19C28FB8FE9D52D311CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D5B49B6048680CD000E48DA /* TMAS3ComplierErrorsPlugin.bundle */,
+				8D5B49B6048680CD000E48DA /* as3CompilerErrors.tmplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,7 +215,7 @@
 			name = TMAS3ComplierErrorsPlugin;
 			productInstallPath = "$(HOME)/Library/Bundles";
 			productName = TMAS3ComplierErrorsPlugin;
-			productReference = 8D5B49B6048680CD000E48DA /* TMAS3ComplierErrorsPlugin.bundle */;
+			productReference = 8D5B49B6048680CD000E48DA /* as3CompilerErrors.tmplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
