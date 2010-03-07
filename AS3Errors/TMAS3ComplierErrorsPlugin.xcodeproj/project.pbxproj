@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3499C5EC114386FD00776DD2 /* CategoryNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C5E5114386FD00776DD2 /* CategoryNode.m */; };
+		3499C5ED114386FD00776DD2 /* CompilerMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C5E6114386FD00776DD2 /* CompilerMessage.m */; };
+		3499C5EE114386FD00776DD2 /* MessageNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C5E8114386FD00776DD2 /* MessageNode.m */; };
+		3499C5EF114386FD00776DD2 /* OutlineViewNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C5EA114386FD00776DD2 /* OutlineViewNode.m */; };
 		74AEC1BF1143576900B31661 /* Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1A31143576900B31661 /* Main.m */; };
 		74AEC1C01143576900B31661 /* CompilerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1A61143576900B31661 /* CompilerController.m */; };
 		74AEC1C11143576900B31661 /* ConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1A81143576900B31661 /* ConsoleViewController.m */; };
@@ -14,12 +18,7 @@
 		74AEC1C31143576900B31661 /* OutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1AC1143576900B31661 /* OutlineViewController.m */; };
 		74AEC1C41143576900B31661 /* WarningsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1AE1143576900B31661 /* WarningsViewController.m */; };
 		74AEC1C51143576900B31661 /* Compiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1B11143576900B31661 /* Compiler.m */; };
-		74AEC1C61143576900B31661 /* CompilerMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1B31143576900B31661 /* CompilerMessage.m */; };
 		74AEC1C71143576900B31661 /* OutputParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1B51143576900B31661 /* OutputParser.m */; };
-		74AEC1C81143576900B31661 /* ErrorNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1B81143576900B31661 /* ErrorNode.m */; };
-		74AEC1C91143576900B31661 /* FileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1BA1143576900B31661 /* FileNode.m */; };
-		74AEC1CA1143576900B31661 /* OutlineViewNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1BC1143576900B31661 /* OutlineViewNode.m */; };
-		74AEC1CB1143576900B31661 /* WarningNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1BE1143576900B31661 /* WarningNode.m */; };
 		74AEC1D4114357BE00B31661 /* CompilerErrors.nib in Resources */ = {isa = PBXBuildFile; fileRef = 74AEC1D3114357BE00B31661 /* CompilerErrors.nib */; };
 		74AEC1FA11435AEB00B31661 /* fcshctl in Resources */ = {isa = PBXBuildFile; fileRef = 74AEC1F711435AEB00B31661 /* fcshctl */; };
 		74AEC1FB11435AEB00B31661 /* fcshctl-mxmlc in Resources */ = {isa = PBXBuildFile; fileRef = 74AEC1F811435AEB00B31661 /* fcshctl-mxmlc */; };
@@ -33,6 +32,14 @@
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCF630370AF2F00C91783 /* TMAS3ComplierErrorsPlugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMAS3ComplierErrorsPlugin_Prefix.pch; sourceTree = "<group>"; };
+		3499C5E4114386FD00776DD2 /* CategoryNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryNode.h; path = ../../crap/AS3Errors/classes/models/CategoryNode.h; sourceTree = SOURCE_ROOT; };
+		3499C5E5114386FD00776DD2 /* CategoryNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryNode.m; path = ../../crap/AS3Errors/classes/models/CategoryNode.m; sourceTree = SOURCE_ROOT; };
+		3499C5E6114386FD00776DD2 /* CompilerMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompilerMessage.m; path = ../../crap/AS3Errors/classes/models/CompilerMessage.m; sourceTree = SOURCE_ROOT; };
+		3499C5E7114386FD00776DD2 /* MessageNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageNode.h; path = ../../crap/AS3Errors/classes/models/MessageNode.h; sourceTree = SOURCE_ROOT; };
+		3499C5E8114386FD00776DD2 /* MessageNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageNode.m; path = ../../crap/AS3Errors/classes/models/MessageNode.m; sourceTree = SOURCE_ROOT; };
+		3499C5E9114386FD00776DD2 /* OutlineViewNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OutlineViewNode.h; path = ../../crap/AS3Errors/classes/models/OutlineViewNode.h; sourceTree = SOURCE_ROOT; };
+		3499C5EA114386FD00776DD2 /* OutlineViewNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OutlineViewNode.m; path = ../../crap/AS3Errors/classes/models/OutlineViewNode.m; sourceTree = SOURCE_ROOT; };
+		3499C5EB114386FD00776DD2 /* CompilerMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompilerMessage.h; path = ../../crap/AS3Errors/classes/models/CompilerMessage.h; sourceTree = SOURCE_ROOT; };
 		7475F78B113B2CD2006C1F74 /* Untitled-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Untitled-Info.plist"; sourceTree = "<group>"; };
 		74AEC1A21143576900B31661 /* Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Main.h; sourceTree = "<group>"; };
 		74AEC1A31143576900B31661 /* Main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Main.m; sourceTree = "<group>"; };
@@ -48,25 +55,15 @@
 		74AEC1AE1143576900B31661 /* WarningsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningsViewController.m; sourceTree = "<group>"; };
 		74AEC1B01143576900B31661 /* Compiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compiler.h; sourceTree = "<group>"; };
 		74AEC1B11143576900B31661 /* Compiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Compiler.m; sourceTree = "<group>"; };
-		74AEC1B21143576900B31661 /* CompilerMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompilerMessage.h; sourceTree = "<group>"; };
-		74AEC1B31143576900B31661 /* CompilerMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompilerMessage.m; sourceTree = "<group>"; };
 		74AEC1B41143576900B31661 /* OutputParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutputParser.h; sourceTree = "<group>"; };
 		74AEC1B51143576900B31661 /* OutputParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutputParser.m; sourceTree = "<group>"; };
-		74AEC1B71143576900B31661 /* ErrorNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorNode.h; sourceTree = "<group>"; };
-		74AEC1B81143576900B31661 /* ErrorNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorNode.m; sourceTree = "<group>"; };
-		74AEC1B91143576900B31661 /* FileNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileNode.h; sourceTree = "<group>"; };
-		74AEC1BA1143576900B31661 /* FileNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileNode.m; sourceTree = "<group>"; };
-		74AEC1BB1143576900B31661 /* OutlineViewNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewNode.h; sourceTree = "<group>"; };
-		74AEC1BC1143576900B31661 /* OutlineViewNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewNode.m; sourceTree = "<group>"; };
-		74AEC1BD1143576900B31661 /* WarningNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningNode.h; sourceTree = "<group>"; };
-		74AEC1BE1143576900B31661 /* WarningNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningNode.m; sourceTree = "<group>"; };
 		74AEC1D3114357BE00B31661 /* CompilerErrors.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = CompilerErrors.nib; sourceTree = "<group>"; };
 		74AEC1F711435AEB00B31661 /* fcshctl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = fcshctl; sourceTree = "<group>"; };
 		74AEC1F811435AEB00B31661 /* fcshctl-mxmlc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "fcshctl-mxmlc"; sourceTree = "<group>"; };
 		74AEC1F911435AEB00B31661 /* fcshctl-mxmlc-ni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "fcshctl-mxmlc-ni"; sourceTree = "<group>"; };
 		74AEC20111435BD700B31661 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		74AEC20211435BD700B31661 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
-		8D5B49B6048680CD000E48DA /* as3CompilerErrors.tmplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = as3CompilerErrors.tmplugin; path = build/Debug/as3CompilerErrors.tmplugin; sourceTree = "<group>"; };
+		8D5B49B6048680CD000E48DA /* TMAS3ComplierErrorsPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMAS3ComplierErrorsPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -125,7 +122,7 @@
 		19C28FB8FE9D52D311CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D5B49B6048680CD000E48DA /* as3CompilerErrors.tmplugin */,
+				8D5B49B6048680CD000E48DA /* TMAS3ComplierErrorsPlugin.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,8 +178,6 @@
 			children = (
 				74AEC1B01143576900B31661 /* Compiler.h */,
 				74AEC1B11143576900B31661 /* Compiler.m */,
-				74AEC1B21143576900B31661 /* CompilerMessage.h */,
-				74AEC1B31143576900B31661 /* CompilerMessage.m */,
 				74AEC1B41143576900B31661 /* OutputParser.h */,
 				74AEC1B51143576900B31661 /* OutputParser.m */,
 			);
@@ -192,14 +187,14 @@
 		74AEC1B61143576900B31661 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				74AEC1B71143576900B31661 /* ErrorNode.h */,
-				74AEC1B81143576900B31661 /* ErrorNode.m */,
-				74AEC1B91143576900B31661 /* FileNode.h */,
-				74AEC1BA1143576900B31661 /* FileNode.m */,
-				74AEC1BB1143576900B31661 /* OutlineViewNode.h */,
-				74AEC1BC1143576900B31661 /* OutlineViewNode.m */,
-				74AEC1BD1143576900B31661 /* WarningNode.h */,
-				74AEC1BE1143576900B31661 /* WarningNode.m */,
+				3499C5E4114386FD00776DD2 /* CategoryNode.h */,
+				3499C5E5114386FD00776DD2 /* CategoryNode.m */,
+				3499C5E6114386FD00776DD2 /* CompilerMessage.m */,
+				3499C5E7114386FD00776DD2 /* MessageNode.h */,
+				3499C5E8114386FD00776DD2 /* MessageNode.m */,
+				3499C5E9114386FD00776DD2 /* OutlineViewNode.h */,
+				3499C5EA114386FD00776DD2 /* OutlineViewNode.m */,
+				3499C5EB114386FD00776DD2 /* CompilerMessage.h */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -266,7 +261,7 @@
 			name = TMAS3ComplierErrorsPlugin;
 			productInstallPath = "$(HOME)/Library/Bundles";
 			productName = TMAS3ComplierErrorsPlugin;
-			productReference = 8D5B49B6048680CD000E48DA /* as3CompilerErrors.tmplugin */;
+			productReference = 8D5B49B6048680CD000E48DA /* TMAS3ComplierErrorsPlugin.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -312,13 +307,12 @@
 				74AEC1C31143576900B31661 /* OutlineViewController.m in Sources */,
 				74AEC1C41143576900B31661 /* WarningsViewController.m in Sources */,
 				74AEC1C51143576900B31661 /* Compiler.m in Sources */,
-				74AEC1C61143576900B31661 /* CompilerMessage.m in Sources */,
 				74AEC1C71143576900B31661 /* OutputParser.m in Sources */,
-				74AEC1C81143576900B31661 /* ErrorNode.m in Sources */,
-				74AEC1C91143576900B31661 /* FileNode.m in Sources */,
-				74AEC1CA1143576900B31661 /* OutlineViewNode.m in Sources */,
-				74AEC1CB1143576900B31661 /* WarningNode.m in Sources */,
 				74AEC20311435BD700B31661 /* RegexKitLite.m in Sources */,
+				3499C5EC114386FD00776DD2 /* CategoryNode.m in Sources */,
+				3499C5ED114386FD00776DD2 /* CompilerMessage.m in Sources */,
+				3499C5EE114386FD00776DD2 /* MessageNode.m in Sources */,
+				3499C5EF114386FD00776DD2 /* OutlineViewNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

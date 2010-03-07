@@ -11,26 +11,29 @@
 
 @implementation OutlineViewNode
 
-- (id)initWithValue:(NSString *)value
+- (id)init
 {
 	if (self = [super init])
-	{
-		nodeValue = [value copy];
 		children = [[NSMutableArray alloc] init];
-	}
-
 	return self;
 }
 
 - (void)dealloc
 {
+	[parent release];
 	[children release];
-	[nodeValue release];
 	[super dealloc];
+}
+
+- (NSInteger)indexOfChild:(OutlineViewNode*)child
+{
+	NSLog(@"::::%d", [children indexOfObject:child]);
+	return [children indexOfObject:child];
 }
 
 - (id)addChild:(id)child
 {
+	[child setParent:self];
 	[children addObject: child];
 	return child;
 }
@@ -40,12 +43,18 @@
 	return children;
 }
 
-- (NSString*)nodeValue
+- (id)parent
 {
-	return nodeValue;
+	return parent;
 }
 
-- (OutlineViewNode *)childAtIndex:(NSInteger)n 
+- (void)setParent:(id)theParent
+{
+	[[self parent] release];
+	parent = theParent;
+}
+
+- (OutlineViewNode*)childAtIndex:(NSInteger)n 
 {
 	NSLog(@"getting child at index %d from a total number of %d.", n, [children count]);
     return [children objectAtIndex: n];

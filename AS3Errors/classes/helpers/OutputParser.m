@@ -64,7 +64,7 @@ NSLog(@"EFF THIS NOISE.");
 				row: [[match objectAtIndex:2] integerValue]
 				column: [[match objectAtIndex:3] integerValue]
 				type: [match objectAtIndex:4]
-				message: [match objectAtIndex:5]
+				description: [match objectAtIndex:5]
 				line: [match objectAtIndex:6]
 			]];
 

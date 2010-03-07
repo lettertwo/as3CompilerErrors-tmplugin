@@ -3292,23 +3292,7 @@
 					<string key="superclassName">OutlineViewController</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">ErrorsViewController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">MessagesTable</string>
-					<string key="superclassName">NSOutlineView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">MessagesTable.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">MessagesTableColumn</string>
-					<string key="superclassName">NSTableColumn</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">MessagesTableColumn.h</string>
+						<string key="minorKey">../AS3Errors/classes/controllers/ErrorsViewController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -3320,7 +3304,7 @@
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">OutlineViewController.h</string>
+						<string key="minorKey">../AS3Errors/classes/controllers/OutlineViewController.h</string>
 					</object>
 				</object>
 			</object>

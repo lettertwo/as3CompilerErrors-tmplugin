@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>Info.plist</string>
+	<string>TMAS3ComplierErrorsPlugin_Prefix.pch</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,20 +21,6 @@
 	<integer>335</integer>
 	<key>metaData</key>
 	<dict>
-		<key>Info.plist</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
 		<key>TMAS3ComplierErrorsPlugin_Prefix.pch</key>
 		<dict>
 			<key>caret</key>
@@ -53,7 +39,6 @@
 	<key>openDocuments</key>
 	<array>
 		<string>TMAS3ComplierErrorsPlugin_Prefix.pch</string>
-		<string>Info.plist</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<false/>

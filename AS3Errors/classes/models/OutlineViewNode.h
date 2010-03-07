@@ -8,15 +8,18 @@
 
 #import <Cocoa/Cocoa.h>
 
-
 @interface OutlineViewNode : NSObject {
-	NSString *nodeValue;
-	NSMutableArray *children;
+	NSMutableArray* children;
+	id parent;
 }
 - (id)addChild:(id)object;
-- (id)initWithValue:(NSString *)value;
 - (NSInteger)numberOfChildren;
-- (OutlineViewNode *)childAtIndex:(NSInteger)n;
-- (NSString *)nodeValue;
+- (OutlineViewNode*)childAtIndex:(NSInteger)n;
+- (id*)nodeValue;
+- (id)parent;
+- (NSInteger)indexOfChild:(OutlineViewNode*)child;
+
+// Shouldn't be exposed.
+- (void)setParent:(id)parent;
 
 @end
