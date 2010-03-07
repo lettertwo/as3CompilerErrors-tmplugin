@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'StandaloneView' target in the 'StandaloneView' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
