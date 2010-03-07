@@ -27,4 +27,9 @@
 	return [message descriptionText];
 }
 
+- (CompilerMessage*)message
+{
+	return message;
+}
+
 @end

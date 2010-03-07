@@ -222,8 +222,8 @@
 				3499C5F91143890D00776DD2 /* CategoryNode.m */,
 				3499C5FA1143890D00776DD2 /* CompilerMessage.h */,
 				3499C5FB1143890D00776DD2 /* CompilerMessage.m */,
-				3499C5FC1143890D00776DD2 /* MessageNode.h */,
 				3499C5FD1143890D00776DD2 /* MessageNode.m */,
+				3499C5FC1143890D00776DD2 /* MessageNode.h */,
 				3499C5FE1143890D00776DD2 /* OutlineViewNode.h */,
 				3499C5FF1143890D00776DD2 /* OutlineViewNode.m */,
 			);

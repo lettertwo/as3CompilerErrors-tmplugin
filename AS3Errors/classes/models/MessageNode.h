@@ -15,5 +15,6 @@
 }
 
 - (id)initWithMessage:(CompilerMessage*)aMessage;
+- (CompilerMessage*)message;
 
 @end

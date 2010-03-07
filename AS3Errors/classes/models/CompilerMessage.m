@@ -16,9 +16,9 @@
 @synthesize column;
 @synthesize type;
 @synthesize descriptionText;
-@synthesize line;
+@synthesize lineOfCode;
 
-- (id) initWithFile: (NSString*)aFile row:(NSInteger)aRow column:(NSInteger)aColumn type:(NSString*)aType descriptionText:(NSString*)aDescription line:(NSString*)aLine
+- (id) initWithFile: (NSString*)aFile row:(NSInteger)aRow column:(NSInteger)aColumn type:(NSString*)aType descriptionText:(NSString*)aDescription lineOfCode:(NSString*)aLineOfCode
 {
 	if (self = [super init])
 	{
@@ -27,7 +27,7 @@
 		[self setColumn:aColumn];
 		[self setType:aType];
 		[self setDescriptionText:aDescription];
-		[self setLine:aLine];
+		[self setLineOfCode:aLineOfCode];
 	}
 	return self;
 }
@@ -37,7 +37,7 @@
 	[file release];
 	[type release];
 	[descriptionText release];
-	[line release];
+	[lineOfCode release];
 	[super dealloc];
 }
 

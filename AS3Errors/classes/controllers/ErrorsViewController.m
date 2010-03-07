@@ -118,7 +118,7 @@ height = 63;
 - (void)addTestData
 {
 	NSMutableArray* messages = [NSMutableArray array];
-	for (unsigned int i = 0; i < 5; i++)
+	for (unsigned int i = 0; i < 3; i++)
 	{
 		CompilerMessage* msg = [[CompilerMessage alloc]
 			initWithFile:[NSString stringWithFormat:@"/Users/matthew/Desktop/My Class - %d", i]
@@ -126,7 +126,7 @@ height = 63;
 			column:6
 			type:@"Error"
 			descriptionText:@"There is an error in your code."
-			line:@"      i = 6;"];
+			lineOfCode:@"      i = 6;"];
 		[messages addObject:msg];
 	}
 	

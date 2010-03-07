@@ -90,7 +90,7 @@ extern NSInteger const LABEL_OFFSET = 32;
 	[[NSColor colorWithDeviceRed:197/255.0 green:197/255.0 blue:197/255.0 alpha:1.0] set];
 	NSRectFill(NSMakeRect(cellFrame.origin.x, cellFrame.origin.y, cellFrame.size.width, 1));
 
-	// Set the text attributes.
+	// Draw the text.
 	NSMutableAttributedString* newString = [[NSMutableAttributedString alloc] initWithAttributedString:[self attributedStringValue]];
 	[newString addAttributes:[self textAttributes] range:NSMakeRange(0, newString.length)];
 	[self setAttributedStringValue: newString];

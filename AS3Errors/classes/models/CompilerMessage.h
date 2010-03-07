@@ -15,7 +15,7 @@
 	NSInteger column;
 	NSString* type;
 	NSString* descriptionText;
-	NSString* line;
+	NSString* lineOfCode;
 }
 
 @property (copy, nonatomic) NSString* file;
@@ -23,8 +23,8 @@
 @property (nonatomic) NSInteger column;
 @property (copy, nonatomic) NSString* type;
 @property (copy, nonatomic) NSString* descriptionText;
-@property (copy, nonatomic) NSString* line;
+@property (copy, nonatomic) NSString* lineOfCode;
 
-- (id) initWithFile: (NSString*)aFile row:(NSInteger)aRow column:(NSInteger)aColumn type:(NSString*)aType descriptionText:(NSString*)aDescription line:(NSString*)aLine;
+- (id) initWithFile: (NSString*)aFile row:(NSInteger)aRow column:(NSInteger)aColumn type:(NSString*)aType descriptionText:(NSString*)aDescription lineOfCode:(NSString*)aLineOfCode;
 
 @end

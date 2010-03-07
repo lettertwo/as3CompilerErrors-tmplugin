@@ -8,9 +8,10 @@
 
 #import "MessageCell.h";
 #import "OutlineViewNode.h";
+#import "CompilerMessage.h";
 
 extern NSInteger const PADDING_TOP = 14;
-extern NSInteger const DESCRIPTION_X = 80;
+extern NSInteger const GAP = 30;
 
 @implementation MessageCell
 
@@ -31,6 +32,41 @@ extern NSInteger const DESCRIPTION_X = 80;
 }
 
 /**
+ * Draws the location information (line and column number) in the specified rectangle.
+ */
+- (void)drawLocationInfoWithFrame:(NSRect)cellFrame inView:(NSView*)controlView
+{
+	CompilerMessage* message = [[self dataSource] message];
+	NSFont* font;
+	NSMutableParagraphStyle* style = [[NSMutableParagraphStyle alloc] init];
+	[style setAlignment:NSRightTextAlignment];
+	
+	// Draw the line number.
+	NSString* lineNumber = [NSString stringWithFormat:@"%d", [message row]];
+	font = [[NSFontManager sharedFontManager] convertFont:[self font] toHaveTrait:NSBoldFontMask];
+	NSDictionary* attrs = [NSDictionary dictionaryWithObjectsAndKeys:
+		style, NSParagraphStyleAttributeName,
+		font, NSFontAttributeName,
+		nil];
+	[lineNumber drawInRect:cellFrame withAttributes:attrs]; 
+	
+	// Draw column info.
+ 	NSSize lineLabelSize = [lineNumber sizeWithAttributes:attrs];
+	NSRect columnFrame = NSMakeRect(cellFrame.origin.x, cellFrame.origin.y + lineLabelSize.height, cellFrame.size.width, cellFrame.size.height);
+	NSString* columnNumber = [NSString stringWithFormat:@"col %d", [message column]];
+	font = [[NSFontManager sharedFontManager] convertFont:[self font] toHaveTrait:NSBoldFontMask];
+	font = [[NSFontManager sharedFontManager] convertFont:font toSize:9];
+	attrs = [NSDictionary dictionaryWithObjectsAndKeys:
+		style, NSParagraphStyleAttributeName,
+		font, NSFontAttributeName,
+		[NSColor colorWithDeviceRed:171/255.0 green:171/255.0 blue:171/255.0 alpha:1.0], NSForegroundColorAttributeName,
+		nil];
+	[columnNumber drawInRect:columnFrame withAttributes:attrs];
+	
+	[style release];
+}
+
+/**
  * Gets the data source.
  */
 - (OutlineViewNode*)dataSource
@@ -39,23 +75,65 @@ extern NSInteger const DESCRIPTION_X = 80;
 }
 
 /**
- * Called by drawInteriorWithFrame:inView: to determine the area the title should be drawn into.
+ * Draws the contents of the cell.
  */
-- (NSRect)titleRectForBounds:(NSRect)theRect {
-    NSRect titleFrame = [super titleRectForBounds:theRect];
-    NSSize titleSize = [[self attributedStringValue] size];
-    titleFrame.origin.y += PADDING_TOP;
-	titleFrame.origin.x += DESCRIPTION_X;
-	titleFrame.size.width -= DESCRIPTION_X;
-    return titleFrame;
+- (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
+{
+	CompilerMessage* message = [[self dataSource] message];
+	NSDictionary* attrs;
+	NSFont* font;
+	NSRect bounds;
+
+	// Draw the location info.
+	NSRect locationFrame = NSMakeRect(cellFrame.origin.x, cellFrame.origin.y + PADDING_TOP, 50, cellFrame.size.height);
+	[self drawLocationInfoWithFrame:locationFrame inView:controlView];
+
+	// Draw the description
+	bounds = NSMakeRect(locationFrame.origin.x + locationFrame.size.width + GAP, cellFrame.origin.y + PADDING_TOP, cellFrame.size.width - locationFrame.size.width - GAP, cellFrame.size.height);
+	NSString* prefix = [NSString stringWithFormat:@"%@:", [message type]];
+	NSString* fullDescription = [NSString stringWithFormat:@"%@ %@", prefix, [message descriptionText]];
+	NSMutableAttributedString* text = [[NSMutableAttributedString alloc] initWithString:fullDescription];
+	font = [[NSFontManager sharedFontManager] convertFont:[self font] toHaveTrait:NSBoldFontMask];
+	[text addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, prefix.length)];
+	[text drawInRect:bounds];
+
+	// Draw the line of code.
+	bounds.origin.y += text.size.height + 10;
+	[self drawLineOfCode:[message lineOfCode] withErrorAtColumn:[message column] withFrame:bounds inView:controlView];
+
+	[text release];
 }
 
 /**
- * Overriden to correctly position title.
+ * Draws the line of code.
  */
-- (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView {
-    NSRect titleRect = [self titleRectForBounds:cellFrame];
-    [[self attributedStringValue] drawInRect:titleRect];
+- (void)drawLineOfCode:(NSString*)lineOfCode withErrorAtColumn:(NSInteger)column withFrame:(NSRect)rect inView:(NSView*)controlView
+{
+// FIXME: This is doing way too much for a redraw. Cache all this stuff or something.
+// TODO: Remove beginning whitespace from the line of code.
+	// Format the loc.
+	NSDictionary* attrs = [NSDictionary dictionaryWithObjectsAndKeys:
+// FIXME: Why isn't it listening to this font size?
+		[NSFont fontWithName:@"Monaco" size:9], NSFontAttributeName,
+		[NSColor colorWithDeviceRed:127/255.0 green:127/255.0 blue:127/255.0 alpha:1.0], NSForegroundColorAttributeName,
+		nil];
+	NSAttributedString* code = [[NSAttributedString alloc] initWithString:lineOfCode attributes:attrs];
+	
+	NSTextContainer* textContainer = [[NSTextContainer alloc] initWithContainerSize:NSMakeSize(1e7, 1e7)];
+	NSTextView* textView = [[NSTextView alloc] init];
+	NSLayoutManager* layoutManager = [textView layoutManager];
+	[layoutManager addTextContainer:textContainer];
+	[textView insertText:code];
+	unsigned int length = [code length];
+	[textView setSpellingState:NSSpellingStateSpellingFlag range:NSMakeRange(column, 1)];
+	NSRange glyphRange = [layoutManager glyphRangeForCharacterRange:NSMakeRange(column, code.length) actualCharacterRange:NULL];
+
+	if (glyphRange.length > 0)
+		[layoutManager drawGlyphsForGlyphRange:glyphRange atPoint:rect.origin];
+		
+	[code release];
+	[textContainer release];
+	[textView release];
 }
 
 /**
