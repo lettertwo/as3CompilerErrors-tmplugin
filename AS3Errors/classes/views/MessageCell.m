@@ -9,6 +9,7 @@
 #import "MessageCell.h";
 #import "OutlineViewNode.h";
 #import "CompilerMessage.h";
+#import "RegexKitLite.h";
 
 extern NSInteger const PADDING_TOP = 14;
 extern NSInteger const GAP = 30;
@@ -95,7 +96,7 @@ extern NSInteger const GAP = 30;
 	NSMutableAttributedString* text = [[NSMutableAttributedString alloc] initWithString:fullDescription];
 	font = [[NSFontManager sharedFontManager] convertFont:[self font] toHaveTrait:NSBoldFontMask];
 	[text addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, prefix.length)];
-	[text drawInRect:bounds];
+	[self drawDescriptionText:text withFrame:bounds inView:controlView];
 
 	// Draw the line of code.
 	bounds.origin.y += text.size.height + 10;
@@ -104,33 +105,72 @@ extern NSInteger const GAP = 30;
 	[text release];
 }
 
+
+- (void)drawDescriptionText:(NSMutableAttributedString*)text withFrame:(NSRect)bounds inView:(NSView*)controlView
+{
+	[text drawInRect:bounds];
+/*
+// Experimental NSLayoutManager code:
+	NSTextContainer* textContainer = [[NSTextContainer alloc] initWithContainerSize:NSMakeSize(1e7, 1e7)];
+	NSTextView* textView = [[NSTextView alloc] init];
+	NSLayoutManager* layoutManager = [textView layoutManager];
+	[layoutManager addTextContainer:textContainer];
+	[textView insertText:text];
+	unsigned int length = [text length];
+	NSRange glyphRange = [layoutManager glyphRangeForCharacterRange:NSMakeRange(0, text.length) actualCharacterRange:NULL];
+	
+NSTextBlock* block = [[NSTextBlock alloc] init];
+bounds.size.width = 50;
+//bounds.origin.x -= 20;
+[block setContentWidth:bounds.size.width type:NSTextBlockAbsoluteValueType];
+[block setContentWidth:1 type:NSTextBlockPercentageValueType];
+
+[block setBackgroundColor:[NSColor yellowColor]];
+[layoutManager setLayoutRect:NSMakeRect(bounds.origin.x - 20, bounds.origin.y, bounds.size.width, bounds.size.height) forTextBlock:block glyphRange:glyphRange];
+
+	if (glyphRange.length > 0)
+		[layoutManager drawGlyphsForGlyphRange:glyphRange atPoint:bounds.origin];
+
+[[NSColor greenColor] set];
+NSRectFill(NSMakeRect(bounds.origin.x, bounds.origin.y, 3, 3));
+
+	[block release];
+	[textContainer release];
+	[textView release];
+*/
+}
+
 /**
  * Draws the line of code.
  */
-- (void)drawLineOfCode:(NSString*)lineOfCode withErrorAtColumn:(NSInteger)column withFrame:(NSRect)rect inView:(NSView*)controlView
+- (void)drawLineOfCode:(NSString*)lineOfCode withErrorAtColumn:(NSInteger)column withFrame:(NSRect)bounds inView:(NSView*)controlView
 {
-// FIXME: This is doing way too much for a redraw. Cache all this stuff or something.
-// TODO: Remove beginning whitespace from the line of code.
-	// Format the loc.
+	// Remove the whitespace from the beginning of the line.
+	NSRange startingWhitespace;
+	startingWhitespace = [lineOfCode rangeOfRegex:@"^\\s+"];
+	column -= startingWhitespace.length;
+	lineOfCode = [lineOfCode substringFromIndex:startingWhitespace.length];
+
+// FIXME: This is doing way too much for a redraw. Cache all this stuff or something. Can we use the NSLayoutManager to layout more (all) of the cell?
 	NSDictionary* attrs = [NSDictionary dictionaryWithObjectsAndKeys:
-// FIXME: Why isn't it listening to this font size?
-		[NSFont fontWithName:@"Monaco" size:9], NSFontAttributeName,
 		[NSColor colorWithDeviceRed:127/255.0 green:127/255.0 blue:127/255.0 alpha:1.0], NSForegroundColorAttributeName,
 		nil];
 	NSAttributedString* code = [[NSAttributedString alloc] initWithString:lineOfCode attributes:attrs];
-	
+
 	NSTextContainer* textContainer = [[NSTextContainer alloc] initWithContainerSize:NSMakeSize(1e7, 1e7)];
 	NSTextView* textView = [[NSTextView alloc] init];
+// TODO: Make decision about code font size. Design calls for 10 but default anti-aliasing doesn't kick in until 11. Should we stick with ten or bump to 11 for AA?
+	[textView setFont: [NSFont fontWithName:@"Monaco" size:10]];
 	NSLayoutManager* layoutManager = [textView layoutManager];
 	[layoutManager addTextContainer:textContainer];
 	[textView insertText:code];
 	unsigned int length = [code length];
 	[textView setSpellingState:NSSpellingStateSpellingFlag range:NSMakeRange(column, 1)];
 	NSRange glyphRange = [layoutManager glyphRangeForCharacterRange:NSMakeRange(column, code.length) actualCharacterRange:NULL];
-
+	
 	if (glyphRange.length > 0)
-		[layoutManager drawGlyphsForGlyphRange:glyphRange atPoint:rect.origin];
-		
+		[layoutManager drawGlyphsForGlyphRange:glyphRange atPoint:bounds.origin];
+
 	[code release];
 	[textContainer release];
 	[textView release];
