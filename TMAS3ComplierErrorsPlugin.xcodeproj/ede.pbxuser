@@ -18,7 +18,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					503,
+					375,
 					20,
 					48,
 					43,
@@ -107,6 +107,24 @@
 			7475F794113B2EFA006C1F74 = 7475F794113B2EFA006C1F74 /* PBXTextBookmark */;
 			74AEC15F1141D38400B31661 = 74AEC15F1141D38400B31661 /* PBXTextBookmark */;
 			74AEC17411434EFF00B31661 /* PBXTextBookmark */ = 74AEC17411434EFF00B31661 /* PBXTextBookmark */;
+			74AEC1D6114357E300B31661 /* PlistBookmark */ = 74AEC1D6114357E300B31661 /* PlistBookmark */;
+			74AEC1D7114357E300B31661 /* PBXBookmark */ = 74AEC1D7114357E300B31661 /* PBXBookmark */;
+			74AEC1D8114357E300B31661 /* PlistBookmark */ = 74AEC1D8114357E300B31661 /* PlistBookmark */;
+			74AEC1D9114357E300B31661 /* PBXTextBookmark */ = 74AEC1D9114357E300B31661 /* PBXTextBookmark */;
+			74AEC1DB114357FF00B31661 /* PBXTextBookmark */ = 74AEC1DB114357FF00B31661 /* PBXTextBookmark */;
+			74AEC1DC114357FF00B31661 /* PBXTextBookmark */ = 74AEC1DC114357FF00B31661 /* PBXTextBookmark */;
+			74AEC1DD114357FF00B31661 /* PBXTextBookmark */ = 74AEC1DD114357FF00B31661 /* PBXTextBookmark */;
+			74AEC1DE114357FF00B31661 /* PBXTextBookmark */ = 74AEC1DE114357FF00B31661 /* PBXTextBookmark */;
+			74AEC1DF114357FF00B31661 /* PBXTextBookmark */ = 74AEC1DF114357FF00B31661 /* PBXTextBookmark */;
+			74AEC1E0114357FF00B31661 /* PBXTextBookmark */ = 74AEC1E0114357FF00B31661 /* PBXTextBookmark */;
+			74AEC1E1114357FF00B31661 /* PBXTextBookmark */ = 74AEC1E1114357FF00B31661 /* PBXTextBookmark */;
+			74AEC1EA114358E500B31661 /* PBXTextBookmark */ = 74AEC1EA114358E500B31661 /* PBXTextBookmark */;
+			74AEC1EB114358E500B31661 /* PBXTextBookmark */ = 74AEC1EB114358E500B31661 /* PBXTextBookmark */;
+			74AEC1ED11435A6D00B31661 /* PBXTextBookmark */ = 74AEC1ED11435A6D00B31661 /* PBXTextBookmark */;
+			74AEC1FD11435B0000B31661 /* PBXTextBookmark */ = 74AEC1FD11435B0000B31661 /* PBXTextBookmark */;
+			74AEC1FE11435B0000B31661 /* PBXTextBookmark */ = 74AEC1FE11435B0000B31661 /* PBXTextBookmark */;
+			74AEC1FF11435B0000B31661 /* PBXTextBookmark */ = 74AEC1FF11435B0000B31661 /* PBXTextBookmark */;
+			74AEC20511435BEA00B31661 /* PBXTextBookmark */ = 74AEC20511435BEA00B31661 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 74E8976F1135CEF30013F5D4 /* Source Control */;
 		userBuildSettings = {
@@ -114,7 +132,7 @@
 	};
 	32DBCF630370AF2F00C91783 /* TMAS3ComplierErrorsPlugin_Prefix.pch */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {750, 137}}";
+			sepNavIntBoundsRect = "{{0, 0}, {750, 138}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 182}";
 		};
@@ -175,6 +193,12 @@
 		state = 1;
 	};
 	740C9143113CC393002AFC9F /* Main.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = Main.h;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/Main.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {713, 420}}";
 			sepNavSelRange = "{550, 0}";
@@ -182,6 +206,12 @@
 		};
 	};
 	740C9144113CC393002AFC9F /* Main.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = Main.m;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/Main.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {713, 1120}}";
 			sepNavSelRange = "{1822, 0}";
@@ -199,17 +229,29 @@
 		vrLoc = 0;
 	};
 	740C915B113CC558002AFC9F /* Compiler.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = Compiler.h;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/Compiler.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {626, 429}}";
-			sepNavSelRange = "{434, 0}";
-			sepNavVisRange = "{0, 434}";
+			sepNavIntBoundsRect = "{{0, 0}, {553, 364}}";
+			sepNavSelRange = "{377, 0}";
+			sepNavVisRange = "{51, 199}";
 		};
 	};
 	740C915C113CC558002AFC9F /* Compiler.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = Compiler.m;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/Compiler.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {802, 1414}}";
-			sepNavSelRange = "{2584, 0}";
-			sepNavVisRange = "{1021, 634}";
+			sepNavIntBoundsRect = "{{0, 0}, {570, 1526}}";
+			sepNavSelRange = "{2308, 0}";
+			sepNavVisRange = "{414, 165}";
 		};
 	};
 	740C9160113CC575002AFC9F /* PBXTextBookmark */ = {
@@ -223,13 +265,25 @@
 		vrLoc = 0;
 	};
 	740C9170113CC688002AFC9F /* CompilerController.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = CompilerController.h;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/CompilerController.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {675, 336}}";
-			sepNavSelRange = "{400, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {553, 308}}";
+			sepNavSelRange = "{370, 0}";
 			sepNavVisRange = "{0, 196}";
 		};
 	};
 	740C9171113CC688002AFC9F /* CompilerController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CompilerController.m;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/CompilerController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {802, 616}}";
 			sepNavSelRange = "{873, 0}";
@@ -287,6 +341,12 @@
 		vrLoc = 0;
 	};
 	745C1412113E1811005CF819 /* fcshctl */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = text.script.sh;
+		name = fcshctl;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/fcshctl";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {675, 5866}}";
 			sepNavSelRange = "{0, 0}";
@@ -308,7 +368,7 @@
 		fRef = 740C9170113CC688002AFC9F /* CompilerController.h */;
 		name = "CompilerController.h: 23";
 		rLen = 0;
-		rLoc = 400;
+		rLoc = 370;
 		rType = 0;
 		vrLen = 196;
 		vrLoc = 0;
@@ -334,6 +394,12 @@
 		vrLoc = 0;
 	};
 	745C14DA113F2F57005CF819 /* ConsoleViewController.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = ConsoleViewController.h;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/ConsoleViewController.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {802, 285}}";
 			sepNavSelRange = "{310, 0}";
@@ -341,6 +407,12 @@
 		};
 	};
 	745C14DB113F2F57005CF819 /* ConsoleViewController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = ConsoleViewController.m;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/ConsoleViewController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {681, 854}}";
 			sepNavSelRange = "{1313, 0}";
@@ -368,6 +440,12 @@
 		vrLoc = 0;
 	};
 	745C151A11400562005CF819 /* ErrorsViewController.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = ErrorsViewController.h;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/ErrorsViewController.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {681, 210}}";
 			sepNavSelRange = "{280, 0}";
@@ -375,6 +453,12 @@
 		};
 	};
 	745C151B11400562005CF819 /* ErrorsViewController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = ErrorsViewController.m;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/ErrorsViewController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {894, 980}}";
 			sepNavSelRange = "{1665, 0}";
@@ -412,6 +496,12 @@
 		vrLoc = 682;
 	};
 	745C159411401E7B005CF819 /* OutlineViewController.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = OutlineViewController.h;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/OutlineViewController.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {681, 448}}";
 			sepNavSelRange = "{608, 0}";
@@ -419,6 +509,12 @@
 		};
 	};
 	745C159511401E7B005CF819 /* OutlineViewController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = OutlineViewController.m;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/OutlineViewController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {720, 952}}";
 			sepNavSelRange = "{1382, 0}";
@@ -446,6 +542,12 @@
 		vrLoc = 0;
 	};
 	745C15A911402011005CF819 /* WarningsViewController.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = WarningsViewController.h;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/WarningsViewController.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {681, 252}}";
 			sepNavSelRange = "{0, 0}";
@@ -453,6 +555,12 @@
 		};
 	};
 	745C15AA11402011005CF819 /* WarningsViewController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = WarningsViewController.m;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/WarningsViewController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {681, 532}}";
 			sepNavSelRange = "{0, 0}";
@@ -480,17 +588,29 @@
 		vrLoc = 0;
 	};
 	745C15C3114027FE005CF819 /* OutlineViewNode.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = OutlineViewNode.h;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/OutlineViewNode.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {802, 322}}";
-			sepNavSelRange = "{185, 15}";
-			sepNavVisRange = "{0, 436}";
+			sepNavIntBoundsRect = "{{0, 0}, {553, 322}}";
+			sepNavSelRange = "{441, 0}";
+			sepNavVisRange = "{0, 173}";
 		};
 	};
 	745C15C4114027FE005CF819 /* OutlineViewNode.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = OutlineViewNode.m;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/OutlineViewNode.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {681, 784}}";
+			sepNavIntBoundsRect = "{{0, 0}, {553, 840}}";
 			sepNavSelRange = "{867, 0}";
-			sepNavVisRange = "{757, 110}";
+			sepNavVisRange = "{669, 198}";
 		};
 	};
 	745C16A6114059E0005CF819 /* PBXTextBookmark */ = {
@@ -498,12 +618,18 @@
 		fRef = 745C15C3114027FE005CF819 /* OutlineViewNode.h */;
 		name = "OutlineViewNode.h: 24";
 		rLen = 0;
-		rLoc = 563;
+		rLoc = 441;
 		rType = 0;
 		vrLen = 173;
 		vrLoc = 0;
 	};
 	745C17171140693E005CF819 /* FileNode.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = FileNode.h;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/FileNode.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {681, 196}}";
 			sepNavSelRange = "{0, 0}";
@@ -511,22 +637,40 @@
 		};
 	};
 	745C171A11406944005CF819 /* ErrorNode.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = ErrorNode.h;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/ErrorNode.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {681, 196}}";
+			sepNavIntBoundsRect = "{{0, 0}, {553, 196}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 194}";
 		};
 	};
 	745C171B11406944005CF819 /* ErrorNode.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = ErrorNode.m;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/ErrorNode.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {681, 196}}";
+			sepNavIntBoundsRect = "{{0, 0}, {553, 196}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 165}";
 		};
 	};
 	745C171D11406949005CF819 /* WarningNode.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = WarningNode.h;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/WarningNode.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {681, 238}}";
+			sepNavIntBoundsRect = "{{0, 0}, {553, 238}}";
 			sepNavSelRange = "{249, 0}";
 			sepNavVisRange = "{0, 196}";
 		};
@@ -671,6 +815,32 @@
 		vrLen = 191;
 		vrLoc = 0;
 	};
+	745C17581140A828005CF819 /* RegexKitLite.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = RegexKitLite.h;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/RegexKitLite.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {553, 3206}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 200}";
+		};
+	};
+	745C17591140A828005CF819 /* RegexKitLite.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = RegexKitLite.m;
+		path = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/RegexKitLite.m";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {553, 23310}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 200}";
+		};
+	};
 	745C17691140AD55005CF819 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 745C15A911402011005CF819 /* WarningsViewController.h */;
@@ -790,6 +960,189 @@
 		rType = 0;
 		vrLen = 275;
 		vrLoc = 1390;
+	};
+	74AEC1B01143576900B31661 /* Compiler.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {553, 392}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 190}";
+		};
+	};
+	74AEC1D6114357E300B31661 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 7475F78B113B2CD2006C1F74 /* Untitled-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/Untitled-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	74AEC1D7114357E300B31661 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 745C17581140A828005CF819 /* RegexKitLite.h */;
+	};
+	74AEC1D8114357E300B31661 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 7475F78B113B2CD2006C1F74 /* Untitled-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/ede/Documents/work/as3CompilerErrors/as3CompilerErrors-tmplugin/Untitled-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	74AEC1D9114357E300B31661 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 745C17581140A828005CF819 /* RegexKitLite.h */;
+		name = "RegexKitLite.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 200;
+		vrLoc = 0;
+	};
+	74AEC1DB114357FF00B31661 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74AEC1B01143576900B31661 /* Compiler.h */;
+		name = "Compiler.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 190;
+		vrLoc = 0;
+	};
+	74AEC1DC114357FF00B31661 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 745C17591140A828005CF819 /* RegexKitLite.m */;
+		name = "RegexKitLite.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 200;
+		vrLoc = 0;
+	};
+	74AEC1DD114357FF00B31661 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 745C17581140A828005CF819 /* RegexKitLite.h */;
+		name = "RegexKitLite.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 200;
+		vrLoc = 0;
+	};
+	74AEC1DE114357FF00B31661 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 745C17581140A828005CF819 /* RegexKitLite.h */;
+		name = "RegexKitLite.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 200;
+		vrLoc = 0;
+	};
+	74AEC1DF114357FF00B31661 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74AEC1B01143576900B31661 /* Compiler.h */;
+		name = "Compiler.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 190;
+		vrLoc = 0;
+	};
+	74AEC1E0114357FF00B31661 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 745C17591140A828005CF819 /* RegexKitLite.m */;
+		name = "RegexKitLite.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 200;
+		vrLoc = 0;
+	};
+	74AEC1E1114357FF00B31661 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 745C17581140A828005CF819 /* RegexKitLite.h */;
+		name = "RegexKitLite.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 200;
+		vrLoc = 0;
+	};
+	74AEC1EA114358E500B31661 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74AEC1B01143576900B31661 /* Compiler.h */;
+		name = "Compiler.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 190;
+		vrLoc = 0;
+	};
+	74AEC1EB114358E500B31661 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74AEC1B01143576900B31661 /* Compiler.h */;
+		name = "Compiler.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 190;
+		vrLoc = 0;
+	};
+	74AEC1ED11435A6D00B31661 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74AEC1B01143576900B31661 /* Compiler.h */;
+		name = "Compiler.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 190;
+		vrLoc = 0;
+	};
+	74AEC1FD11435B0000B31661 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74AEC1B01143576900B31661 /* Compiler.h */;
+		name = "Compiler.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 190;
+		vrLoc = 0;
+	};
+	74AEC1FE11435B0000B31661 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74AEC1B01143576900B31661 /* Compiler.h */;
+		name = "Compiler.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 190;
+		vrLoc = 0;
+	};
+	74AEC1FF11435B0000B31661 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32DBCF630370AF2F00C91783 /* TMAS3ComplierErrorsPlugin_Prefix.pch */;
+		name = "TMAS3ComplierErrorsPlugin_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 182;
+		vrLoc = 0;
+	};
+	74AEC20511435BEA00B31661 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32DBCF630370AF2F00C91783 /* TMAS3ComplierErrorsPlugin_Prefix.pch */;
+		name = "TMAS3ComplierErrorsPlugin_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 182;
+		vrLoc = 0;
 	};
 	74E8976F1135CEF30013F5D4 /* Source Control */ = {
 		isa = PBXSourceControlManager;
