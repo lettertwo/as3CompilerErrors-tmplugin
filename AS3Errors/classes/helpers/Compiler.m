@@ -72,7 +72,7 @@
 
 	if ([data length] > 0)
 	{
-		NSString* str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+		NSString* str = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
 		[handle readInBackgroundAndNotify];
 
 		[parser addToBuffer: str];

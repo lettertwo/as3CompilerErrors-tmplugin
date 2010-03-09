@@ -16,18 +16,16 @@
 		3499C65111438EF500776DD2 /* MessagesTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C64C11438EF500776DD2 /* MessagesTable.m */; };
 		3499C65211438EF500776DD2 /* MessagesTableColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C64E11438EF500776DD2 /* MessagesTableColumn.m */; };
 		3499C65E11438F8F00776DD2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3499C65D11438F8F00776DD2 /* MainMenu.xib */; };
+		7492ED94114545100062AF1C /* fcshctl-mxmlc-ni in Resources */ = {isa = PBXBuildFile; fileRef = 7492ED91114545100062AF1C /* fcshctl-mxmlc-ni */; };
+		7492ED95114545100062AF1C /* fcshctl-mxmlc in Resources */ = {isa = PBXBuildFile; fileRef = 7492ED92114545100062AF1C /* fcshctl-mxmlc */; };
+		7492ED96114545100062AF1C /* fcshctl in Resources */ = {isa = PBXBuildFile; fileRef = 7492ED93114545100062AF1C /* fcshctl */; };
 		74AEC1BF1143576900B31661 /* Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1A31143576900B31661 /* Main.m */; };
 		74AEC1C01143576900B31661 /* CompilerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1A61143576900B31661 /* CompilerController.m */; };
 		74AEC1C11143576900B31661 /* ConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1A81143576900B31661 /* ConsoleViewController.m */; };
 		74AEC1C21143576900B31661 /* ErrorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1AA1143576900B31661 /* ErrorsViewController.m */; };
-		74AEC1C31143576900B31661 /* OutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1AC1143576900B31661 /* OutlineViewController.m */; };
-		74AEC1C41143576900B31661 /* WarningsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1AE1143576900B31661 /* WarningsViewController.m */; };
 		74AEC1C51143576900B31661 /* Compiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1B11143576900B31661 /* Compiler.m */; };
 		74AEC1C71143576900B31661 /* OutputParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC1B51143576900B31661 /* OutputParser.m */; };
 		74AEC1D4114357BE00B31661 /* CompilerErrors.nib in Resources */ = {isa = PBXBuildFile; fileRef = 74AEC1D3114357BE00B31661 /* CompilerErrors.nib */; };
-		74AEC1FA11435AEB00B31661 /* fcshctl in Resources */ = {isa = PBXBuildFile; fileRef = 74AEC1F711435AEB00B31661 /* fcshctl */; };
-		74AEC1FB11435AEB00B31661 /* fcshctl-mxmlc in Resources */ = {isa = PBXBuildFile; fileRef = 74AEC1F811435AEB00B31661 /* fcshctl-mxmlc */; };
-		74AEC1FC11435AEB00B31661 /* fcshctl-mxmlc-ni in Resources */ = {isa = PBXBuildFile; fileRef = 74AEC1F911435AEB00B31661 /* fcshctl-mxmlc-ni */; };
 		74AEC20311435BD700B31661 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AEC20211435BD700B31661 /* RegexKitLite.m */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -54,7 +52,9 @@
 		3499C64D11438EF500776DD2 /* MessagesTableColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesTableColumn.h; sourceTree = "<group>"; };
 		3499C64E11438EF500776DD2 /* MessagesTableColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesTableColumn.m; sourceTree = "<group>"; };
 		3499C65D11438F8F00776DD2 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		7475F78B113B2CD2006C1F74 /* Untitled-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Untitled-Info.plist"; sourceTree = "<group>"; };
+		7492ED91114545100062AF1C /* fcshctl-mxmlc-ni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "fcshctl-mxmlc-ni"; sourceTree = "<group>"; };
+		7492ED92114545100062AF1C /* fcshctl-mxmlc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "fcshctl-mxmlc"; sourceTree = "<group>"; };
+		7492ED93114545100062AF1C /* fcshctl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = fcshctl; sourceTree = "<group>"; };
 		74AEC1A21143576900B31661 /* Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Main.h; sourceTree = "<group>"; };
 		74AEC1A31143576900B31661 /* Main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Main.m; sourceTree = "<group>"; };
 		74AEC1A51143576900B31661 /* CompilerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompilerController.h; sourceTree = "<group>"; };
@@ -63,18 +63,11 @@
 		74AEC1A81143576900B31661 /* ConsoleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsoleViewController.m; sourceTree = "<group>"; };
 		74AEC1A91143576900B31661 /* ErrorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorsViewController.h; sourceTree = "<group>"; };
 		74AEC1AA1143576900B31661 /* ErrorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorsViewController.m; sourceTree = "<group>"; };
-		74AEC1AB1143576900B31661 /* OutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewController.h; sourceTree = "<group>"; };
-		74AEC1AC1143576900B31661 /* OutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewController.m; sourceTree = "<group>"; };
-		74AEC1AD1143576900B31661 /* WarningsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningsViewController.h; sourceTree = "<group>"; };
-		74AEC1AE1143576900B31661 /* WarningsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningsViewController.m; sourceTree = "<group>"; };
 		74AEC1B01143576900B31661 /* Compiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compiler.h; sourceTree = "<group>"; };
 		74AEC1B11143576900B31661 /* Compiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Compiler.m; sourceTree = "<group>"; };
 		74AEC1B41143576900B31661 /* OutputParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutputParser.h; sourceTree = "<group>"; };
 		74AEC1B51143576900B31661 /* OutputParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutputParser.m; sourceTree = "<group>"; };
 		74AEC1D3114357BE00B31661 /* CompilerErrors.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = CompilerErrors.nib; sourceTree = "<group>"; };
-		74AEC1F711435AEB00B31661 /* fcshctl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = fcshctl; sourceTree = "<group>"; };
-		74AEC1F811435AEB00B31661 /* fcshctl-mxmlc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "fcshctl-mxmlc"; sourceTree = "<group>"; };
-		74AEC1F911435AEB00B31661 /* fcshctl-mxmlc-ni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "fcshctl-mxmlc-ni"; sourceTree = "<group>"; };
 		74AEC20111435BD700B31661 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		74AEC20211435BD700B31661 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* TMAS3ComplierErrorsPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMAS3ComplierErrorsPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +94,6 @@
 				32C88E010371C26100C91783 /* Other Sources */,
 				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
-				7475F78B113B2CD2006C1F74 /* Untitled-Info.plist */,
 			);
 			name = TMAS3ComplierErrorsPlugin;
 			sourceTree = "<group>";
@@ -195,10 +187,6 @@
 				74AEC1A81143576900B31661 /* ConsoleViewController.m */,
 				74AEC1A91143576900B31661 /* ErrorsViewController.h */,
 				74AEC1AA1143576900B31661 /* ErrorsViewController.m */,
-				74AEC1AB1143576900B31661 /* OutlineViewController.h */,
-				74AEC1AC1143576900B31661 /* OutlineViewController.m */,
-				74AEC1AD1143576900B31661 /* WarningsViewController.h */,
-				74AEC1AE1143576900B31661 /* WarningsViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -232,18 +220,10 @@
 		74AEC1D0114357BE00B31661 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				74AEC1D1114357BE00B31661 /* images */,
 				74AEC1D2114357BE00B31661 /* nib */,
 				74AEC1F611435AEB00B31661 /* scripts */,
 			);
 			path = resources;
-			sourceTree = "<group>";
-		};
-		74AEC1D1114357BE00B31661 /* images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = images;
 			sourceTree = "<group>";
 		};
 		74AEC1D2114357BE00B31661 /* nib */ = {
@@ -258,9 +238,9 @@
 		74AEC1F611435AEB00B31661 /* scripts */ = {
 			isa = PBXGroup;
 			children = (
-				74AEC1F711435AEB00B31661 /* fcshctl */,
-				74AEC1F811435AEB00B31661 /* fcshctl-mxmlc */,
-				74AEC1F911435AEB00B31661 /* fcshctl-mxmlc-ni */,
+				7492ED91114545100062AF1C /* fcshctl-mxmlc-ni */,
+				7492ED92114545100062AF1C /* fcshctl-mxmlc */,
+				7492ED93114545100062AF1C /* fcshctl */,
 			);
 			path = scripts;
 			sourceTree = "<group>";
@@ -318,10 +298,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				74AEC1D4114357BE00B31661 /* CompilerErrors.nib in Resources */,
-				74AEC1FA11435AEB00B31661 /* fcshctl in Resources */,
-				74AEC1FB11435AEB00B31661 /* fcshctl-mxmlc in Resources */,
-				74AEC1FC11435AEB00B31661 /* fcshctl-mxmlc-ni in Resources */,
 				3499C65E11438F8F00776DD2 /* MainMenu.xib in Resources */,
+				7492ED94114545100062AF1C /* fcshctl-mxmlc-ni in Resources */,
+				7492ED95114545100062AF1C /* fcshctl-mxmlc in Resources */,
+				7492ED96114545100062AF1C /* fcshctl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,8 +316,6 @@
 				74AEC1C01143576900B31661 /* CompilerController.m in Sources */,
 				74AEC1C11143576900B31661 /* ConsoleViewController.m in Sources */,
 				74AEC1C21143576900B31661 /* ErrorsViewController.m in Sources */,
-				74AEC1C31143576900B31661 /* OutlineViewController.m in Sources */,
-				74AEC1C41143576900B31661 /* WarningsViewController.m in Sources */,
 				74AEC1C51143576900B31661 /* Compiler.m in Sources */,
 				74AEC1C71143576900B31661 /* OutputParser.m in Sources */,
 				74AEC20311435BD700B31661 /* RegexKitLite.m in Sources */,
@@ -360,6 +338,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Application Support/Xcode/Frameworks\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -379,6 +361,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Application Support/Xcode/Frameworks\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TMAS3ComplierErrorsPlugin_Prefix.pch;

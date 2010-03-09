@@ -10,7 +10,20 @@
 #import "CompilerMessage.h";
 #import "RegexKitLite.h";
 
-static NSString* const MESSAGE_REGEX = @"(?m)^(\\/.*)\\(([0-9]+)\\): col: ([0-9]+) ([^:]+): (.*)[\\s\\n]+(.*)"; // old
+
+
+/*
+/Users/ede/Desktop/junk/Junk0.as(5): col: 15 Error: Syntax error: expecting rightbrace before semicolon.
+
+i hate my crap;
+             ^
+*/
+// i like this:
+// static NSString* const MESSAGE_REGEX = @"(?m)^(/[^(]+)\\(([0-9]+)\\): col: ([0-9]+) ([^:]+): (.*)\\n\\n(.*)\\n"; //  new
+static NSString* const MESSAGE_REGEX = @"(?m)^(/[^(]+)\\(([0-9]+)\\): col: ([0-9]+) ([^:]+): (.*)\\n\\n(.*)\\n"; //  new
+
+
+
 //static NSString* const MESSAGE_REGEX = @"(?m)^(\\/.*)\\(([0-9]+)\\): col: ([0-9]+) ([^:]+): (.*)\\n+([^\\n]*)";
 /*
 static NSString* const MESSAGE_REGEX = @"(?m)^(\\/.*)\\(([0-9]+)\\): col: ([0-9]+) ([^:]+): (.*)[\\s\\n]+(.*)"; // old
@@ -30,7 +43,17 @@ static NSString* const MESSAGE_REGEX = @"(?m)^(\\/[^(]+)\\(([0-9]+)\\): col: ([0
 
 - (void) addToBuffer:(NSString*)aString
 {
-	buffer = [NSString stringWithFormat:@"%@%@", buffer, aString];
+//	NSArray* match = [buffer captureComponentsMatchedByRegex:@"(?m)^(.*)\\n+"];
+//	NSLog(@"line to add: %@", aString);
+
+
+	buffer = [NSMutableString stringWithFormat:@"%@%@", buffer, aString];
+	[buffer replaceOccurrencesOfRegex:@"[\\r\\f]+" withString:@""];
+	
+	NSLog(@"BUFFER:\n%@", buffer);
+	// NSArray* match = [buffer captureComponentsMatchedByRegex:@"(?m)^(.*)\\n+"];
+	// 
+	// 	NSLog(@"------- to buffer: %@", match);
 }
 
 - (void) clearBuffer
@@ -40,6 +63,7 @@ static NSString* const MESSAGE_REGEX = @"(?m)^(\\/[^(]+)\\(([0-9]+)\\): col: ([0
 
 - (void) parse
 {
+	
 	unsigned int bufferLength = [buffer length];
 	NSRange searchRange = NSMakeRange(0, bufferLength);
 	NSRange matchRange;
@@ -48,9 +72,9 @@ static NSString* const MESSAGE_REGEX = @"(?m)^(\\/[^(]+)\\(([0-9]+)\\): col: ([0
 	while (searchRange.location < bufferLength)
 	{
 		matchRange = [buffer rangeOfRegex:MESSAGE_REGEX inRange:searchRange];
+
 		if (matchRange.location == NSNotFound)
 		{
-NSLog(@"EFF THIS NOISE.");
 			break;
 		}
 		else
@@ -64,18 +88,13 @@ NSLog(@"EFF THIS NOISE.");
 				row: [[match objectAtIndex:2] integerValue]
 				column: [[match objectAtIndex:3] integerValue]
 				type: [match objectAtIndex:4]
-				description: [match objectAtIndex:5]
-				line: [match objectAtIndex:6]
+				descriptionText: [match objectAtIndex:5]
+				lineOfCode: [match objectAtIndex:6]
 			]];
-
-NSLog(@"Found match: %s", match);			
-
 			searchRange.location = matchRange.location + matchRange.length;
 			searchRange.length = bufferLength - searchRange.location;
 		}
 	}
-
-	NSLog(@"Parsed result: %@\nFrom buffer: %@", result, buffer);
 
 	if (result != nil)
 	{

@@ -160,20 +160,28 @@ NSRectFill(NSMakeRect(bounds.origin.x, bounds.origin.y, 3, 3));
 	NSTextContainer* textContainer = [[NSTextContainer alloc] initWithContainerSize:NSMakeSize(1e7, 1e7)];
 	NSTextView* textView = [[NSTextView alloc] init];
 // TODO: Make decision about code font size. Design calls for 10 but default anti-aliasing doesn't kick in until 11. Should we stick with ten or bump to 11 for AA?
-	[textView setFont: [NSFont fontWithName:@"Monaco" size:10]];
+	[textView setFont: [NSFont fontWithName:@"Monaco" size:11]];
 	NSLayoutManager* layoutManager = [textView layoutManager];
 	[layoutManager addTextContainer:textContainer];
 	[textView insertText:code];
 	unsigned int length = [code length];
-	[textView setSpellingState:NSSpellingStateSpellingFlag range:NSMakeRange(column, 1)];
-	NSRange glyphRange = [layoutManager glyphRangeForCharacterRange:NSMakeRange(column, code.length) actualCharacterRange:NULL];
+	[textView setSpellingState:NSSpellingStateSpellingFlag range:NSMakeRange(column - 1, 1)];
+	NSRange glyphRange = [layoutManager glyphRangeForCharacterRange:NSMakeRange(0, code.length) actualCharacterRange:NULL];
 	
 	if (glyphRange.length > 0)
 		[layoutManager drawGlyphsForGlyphRange:glyphRange atPoint:bounds.origin];
 
+
+
 	[code release];
 	[textContainer release];
 	[textView release];
+
+
+	// NSAttributedString* d = [[NSAttributedString alloc] initWithString:lineOfCode];
+	// [d drawInRect:bounds];
+	// [d release];
+
 }
 
 /**

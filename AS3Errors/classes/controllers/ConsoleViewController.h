@@ -13,7 +13,7 @@
 	IBOutlet NSTextView* view;
 }
 
-- (void)clear;
+- (IBAction)clear:(id)sender;
 - (void)print:(NSString*)string;
 
 @end

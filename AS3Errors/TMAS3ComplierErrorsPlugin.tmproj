@@ -3,46 +3,136 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>TMAS3ComplierErrorsPlugin_Prefix.pch</string>
+	<string>classes/controllers/ErrorsViewController.m</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>expanded</key>
 			<true/>
 			<key>name</key>
-			<string>TMAS3ComplierErrorsPlugin</string>
+			<string>classes</string>
 			<key>regexFolderFilter</key>
 			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
 			<key>sourceDirectory</key>
-			<string></string>
+			<string>classes</string>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>335</integer>
 	<key>metaData</key>
 	<dict>
-		<key>TMAS3ComplierErrorsPlugin_Prefix.pch</key>
+		<key>classes/controllers/CompilerController.m</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>7</integer>
+				<integer>29</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>classes/controllers/ConsoleViewController.m</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>9</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>1</integer>
+		</dict>
+		<key>classes/controllers/ErrorsViewController.h</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>38</integer>
+				<key>line</key>
+				<integer>16</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>classes/controllers/ErrorsViewController.m</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>64</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>43</integer>
+		</dict>
+		<key>classes/helpers/Compiler.m</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>39</integer>
+				<key>line</key>
+				<integer>36</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>36</integer>
+		</dict>
+		<key>classes/helpers/OutputParser.m</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>93</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>56</integer>
+		</dict>
+		<key>classes/views/MessageCell.m</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>173</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>143</integer>
+		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>TMAS3ComplierErrorsPlugin_Prefix.pch</string>
+		<string>classes/controllers/ErrorsViewController.h</string>
+		<string>classes/controllers/ErrorsViewController.m</string>
+		<string>classes/controllers/ConsoleViewController.m</string>
+		<string>classes/helpers/OutputParser.m</string>
+		<string>classes/views/MessageCell.m</string>
+		<string>classes/controllers/CompilerController.m</string>
+		<string>classes/helpers/Compiler.m</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<false/>
 	<key>windowFrame</key>
-	<string>{{0, 4}, {1440, 874}}</string>
+	<string>{{198, 205}, {1440, 874}}</string>
 </dict>
 </plist>

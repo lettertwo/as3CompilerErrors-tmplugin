@@ -15,49 +15,113 @@
 
 @implementation ErrorsViewController
 
+
+
+@synthesize dataSource;
+
 - (id)init
 {
 	if (self = [super init])
 	{
+		[self setDataSource:[NSMutableArray array]];
+
+		// Add an observer to monitor compiler start.
+		[[NSNotificationCenter defaultCenter] addObserver: self
+			selector: @selector(startNotificationHandler:)
+			name: @"start"
+			object: nil
+		];
+
 		// Add an observer to monitor results from the compiler output parser.
 		[[NSNotificationCenter defaultCenter] addObserver:self 
 			selector:@selector(errorNotificationHandler:) 
 			name:@"resultsAvailable" 
 			object: nil
 		];
-[self addTestData];
-[self addTestData];
-[self addTestData];
 	}
 
 	return self;
 }
 
+
+//
+// data provider methods
+//
+- (NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item 
+{
+	return item == nil ? [dataSource count] : [item numberOfChildren];
+}
+
+- (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item 
+{
+	return [item numberOfChildren] > 0;
+}
+
+- (id)outlineView:(NSOutlineView *)outlineView child:(NSInteger)index ofItem:(id)item 
+{
+	if (item == nil)
+	{
+		return [dataSource objectForKey: [[dataSource allKeys] objectAtIndex: index]];
+	}
+	else
+	{
+		return [item childAtIndex: index];
+	}
+}
+
+- (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item 
+{
+	return (id)[item nodeValue];
+}
+
+
 //
 // notification handlers
 //
 
-- (void)errorNotificationHandler:(NSNotification*)notification
+- (void)startNotificationHandler:(NSNotification*)notification
 {
-	NSMutableArray* results = [[notification userInfo] objectForKey:@"results"];
-	OutlineViewNode* categoryNode = nil;
-
-	for (unsigned int index = 0; index < [results count]; index++)
-	{
-		id msg = [results objectAtIndex:index];
-// TODO: If caegory exists, add to it. Else, create.
-		if (categoryNode == nil)
-		{
-			categoryNode = [[CategoryNode alloc] initWithValue: [msg file]];
-			[[self dataSource] addObject: categoryNode];
-		}
-		[categoryNode addChild: [[MessageNode alloc] initWithMessage: msg]];
-	}
-
+	[dataSource removeAllObjects];
 	[view reloadData];
 }
 
+- (void)errorNotificationHandler:(NSNotification*)notification
+{
+	NSMutableArray* results = [[notification userInfo] objectForKey:@"results"];
+	CategoryNode* categoryNode = nil;
+	
+	for (unsigned int index = 0; index < [results count]; index++)
+	{
+		id msg = [results objectAtIndex:index];
+		NSString* key = [msg file];
+		
+		categoryNode = [[self dataSource] objectForKey: key];
+		
+		if (categoryNode == nil)
+		{
+			categoryNode = [[CategoryNode alloc] initWithValue: key];
+			[[self dataSource] setObject: categoryNode forKey: key];
+		}
+		[categoryNode addChild: [[MessageNode alloc] initWithMessage: msg]];
+	}
+	
+	
+// 	OutlineViewNode* categoryNode = nil;
+// 
+// 	for (unsigned int index = 0; index < [results count]; index++)
+// 	{
+// 		id msg = [results objectAtIndex:index];
+// // TODO: If caegory exists, add to it. Else, create.
+// 		if (categoryNode == nil)
+// 		{
+// 			categoryNode = [[CategoryNode alloc] initWithValue: [msg file]];
+// 			[[self dataSource] addObject: categoryNode];
+// 		}
+// 		[categoryNode addChild: [[MessageNode alloc] initWithMessage: msg]];
+// 	}
 
+	[view reloadData];
+}
 
 
 /**
@@ -115,23 +179,23 @@ height = 63;
 }
 
 
-- (void)addTestData
-{
-	NSMutableArray* messages = [NSMutableArray array];
-	for (unsigned int i = 0; i < 3; i++)
-	{
-		CompilerMessage* msg = [[CompilerMessage alloc]
-			initWithFile:[NSString stringWithFormat:@"/Users/matthew/Desktop/My Class - %d", i]
-			row:105
-			column:6
-			type:@"Error"
-			descriptionText:@"There is an error in your code."
-			lineOfCode:@"      i = 6;"];
-		[messages addObject:msg];
-	}
-	
-	[[NSNotificationCenter defaultCenter] postNotificationName:@"resultsAvailable" object:nil userInfo:[NSDictionary dictionaryWithObject:messages forKey:@"results"]];
-}
+// - (void)addTestData
+// {
+// 	NSMutableArray* messages = [NSMutableArray array];
+// 	for (unsigned int i = 0; i < 3; i++)
+// 	{
+// 		CompilerMessage* msg = [[CompilerMessage alloc]
+// 			initWithFile:[NSString stringWithFormat:@"/Users/matthew/Desktop/My Class - %d", i]
+// 			row:105
+// 			column:6
+// 			type:@"Error"
+// 			descriptionText:@"There is an error in your code."
+// 			lineOfCode:@"      i = 6;"];
+// 		[messages addObject:msg];
+// 	}
+// 	
+// 	[[NSNotificationCenter defaultCenter] postNotificationName:@"resultsAvailable" object:nil userInfo:[NSDictionary dictionaryWithObject:messages forKey:@"results"]];
+// }
 
 @end
 

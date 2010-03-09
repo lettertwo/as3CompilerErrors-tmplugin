@@ -14,13 +14,6 @@
 {
 	if (self = [super init])
 	{
-		// Add an observer to monitor compiler start.
-		[[NSNotificationCenter defaultCenter] addObserver: self
-			selector: @selector(startNotificationHandler:)
-			name: @"start"
-			object: nil
-		];
-		
 		// Add an observer to monitor compiler output.
 		[[NSNotificationCenter defaultCenter] addObserver: self 
 			selector: @selector(outputNotificationHandler:)
@@ -31,8 +24,9 @@
 	return self;
 }
 
-- (void)clear
+- (IBAction)clear:(id)sender
 {
+	NSLog(@"CLEAR!!!!!")	;
 	NSTextStorage* textStorage = [view textStorage];
 	[textStorage beginEditing];
 	[textStorage deleteCharactersInRange:NSMakeRange(0, [textStorage length])];
@@ -50,11 +44,6 @@
 	[textStorage beginEditing];
 	[textStorage replaceCharactersInRange:NSMakeRange([textStorage length], 0) withString:string];
 	[textStorage endEditing];
-}
-
-- (void)startNotificationHandler:(NSNotification*)notification
-{
-	[self clear];
 }
 
 @end
