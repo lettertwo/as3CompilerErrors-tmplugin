@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		3499C63C11438ECE00776DD2 /* CategoryNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C63511438ECE00776DD2 /* CategoryNode.m */; };
 		3499C63D11438ECE00776DD2 /* CompilerMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C63711438ECE00776DD2 /* CompilerMessage.m */; };
-		3499C63E11438ECE00776DD2 /* MessageNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C63911438ECE00776DD2 /* MessageNode.m */; };
 		3499C63F11438ECE00776DD2 /* OutlineViewNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C63B11438ECE00776DD2 /* OutlineViewNode.m */; };
 		3499C64F11438EF500776DD2 /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C64811438EF500776DD2 /* CategoryCell.m */; };
 		3499C65011438EF500776DD2 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C64A11438EF500776DD2 /* MessageCell.m */; };
 		3499C65111438EF500776DD2 /* MessagesTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C64C11438EF500776DD2 /* MessagesTable.m */; };
 		3499C65211438EF500776DD2 /* MessagesTableColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C64E11438EF500776DD2 /* MessagesTableColumn.m */; };
 		3499C65E11438F8F00776DD2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3499C65D11438F8F00776DD2 /* MainMenu.xib */; };
+		74851EF411484AF80002C748 /* MessageNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 74851EF311484AF80002C748 /* MessageNode.m */; };
 		7492ED94114545100062AF1C /* fcshctl-mxmlc-ni in Resources */ = {isa = PBXBuildFile; fileRef = 7492ED91114545100062AF1C /* fcshctl-mxmlc-ni */; };
 		7492ED95114545100062AF1C /* fcshctl-mxmlc in Resources */ = {isa = PBXBuildFile; fileRef = 7492ED92114545100062AF1C /* fcshctl-mxmlc */; };
 		7492ED96114545100062AF1C /* fcshctl in Resources */ = {isa = PBXBuildFile; fileRef = 7492ED93114545100062AF1C /* fcshctl */; };
@@ -39,8 +39,6 @@
 		3499C63511438ECE00776DD2 /* CategoryNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryNode.m; sourceTree = "<group>"; };
 		3499C63611438ECE00776DD2 /* CompilerMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompilerMessage.h; sourceTree = "<group>"; };
 		3499C63711438ECE00776DD2 /* CompilerMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompilerMessage.m; sourceTree = "<group>"; };
-		3499C63811438ECE00776DD2 /* MessageNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageNode.h; sourceTree = "<group>"; };
-		3499C63911438ECE00776DD2 /* MessageNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageNode.m; sourceTree = "<group>"; };
 		3499C63A11438ECE00776DD2 /* OutlineViewNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewNode.h; sourceTree = "<group>"; };
 		3499C63B11438ECE00776DD2 /* OutlineViewNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewNode.m; sourceTree = "<group>"; };
 		3499C64711438EF500776DD2 /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
@@ -52,6 +50,8 @@
 		3499C64D11438EF500776DD2 /* MessagesTableColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesTableColumn.h; sourceTree = "<group>"; };
 		3499C64E11438EF500776DD2 /* MessagesTableColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesTableColumn.m; sourceTree = "<group>"; };
 		3499C65D11438F8F00776DD2 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		74851EF211484AF80002C748 /* MessageNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageNode.h; sourceTree = "<group>"; };
+		74851EF311484AF80002C748 /* MessageNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageNode.m; sourceTree = "<group>"; };
 		7492ED91114545100062AF1C /* fcshctl-mxmlc-ni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "fcshctl-mxmlc-ni"; sourceTree = "<group>"; };
 		7492ED92114545100062AF1C /* fcshctl-mxmlc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "fcshctl-mxmlc"; sourceTree = "<group>"; };
 		7492ED93114545100062AF1C /* fcshctl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = fcshctl; sourceTree = "<group>"; };
@@ -209,8 +209,8 @@
 				3499C63511438ECE00776DD2 /* CategoryNode.m */,
 				3499C63611438ECE00776DD2 /* CompilerMessage.h */,
 				3499C63711438ECE00776DD2 /* CompilerMessage.m */,
-				3499C63811438ECE00776DD2 /* MessageNode.h */,
-				3499C63911438ECE00776DD2 /* MessageNode.m */,
+				74851EF211484AF80002C748 /* MessageNode.h */,
+				74851EF311484AF80002C748 /* MessageNode.m */,
 				3499C63A11438ECE00776DD2 /* OutlineViewNode.h */,
 				3499C63B11438ECE00776DD2 /* OutlineViewNode.m */,
 			);
@@ -321,12 +321,12 @@
 				74AEC20311435BD700B31661 /* RegexKitLite.m in Sources */,
 				3499C63C11438ECE00776DD2 /* CategoryNode.m in Sources */,
 				3499C63D11438ECE00776DD2 /* CompilerMessage.m in Sources */,
-				3499C63E11438ECE00776DD2 /* MessageNode.m in Sources */,
 				3499C63F11438ECE00776DD2 /* OutlineViewNode.m in Sources */,
 				3499C64F11438EF500776DD2 /* CategoryCell.m in Sources */,
 				3499C65011438EF500776DD2 /* MessageCell.m in Sources */,
 				3499C65111438EF500776DD2 /* MessagesTable.m in Sources */,
 				3499C65211438EF500776DD2 /* MessagesTableColumn.m in Sources */,
+				74851EF411484AF80002C748 /* MessageNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

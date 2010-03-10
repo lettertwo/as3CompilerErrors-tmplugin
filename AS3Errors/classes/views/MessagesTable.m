@@ -42,4 +42,16 @@
 {
 }
 
+
+/**
+ * Overridden to facilitate an 'expansion' memory.
+ */
+- (void)expandItem:(id)item
+{
+	
+	NSLog(@"EXPANDING %@", item);
+	
+	[super expandItem: item];
+}
+
 @end

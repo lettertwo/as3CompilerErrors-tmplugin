@@ -41,4 +41,21 @@
 	[super dealloc];
 }
 
+-(id) copyWithZone:(NSZone*)zone 
+{
+	return [[CompilerMessage alloc] initWithFile: file row: row column: column type: type descriptionText: descriptionText lineOfCode: lineOfCode];
+}
+
+
+- (NSString*)messageId
+{
+	return [CompilerMessage generateMessageId: self];
+}
+
+// Static util for generating an id for a compiler message.
++ (NSString*)generateMessageId:(CompilerMessage*)aMessage
+{
+	return [NSString stringWithFormat: @"%@%d%d%@%@%@", [aMessage file], [aMessage row], [aMessage column], [aMessage type], [aMessage descriptionText], [aMessage lineOfCode]];
+}
+
 @end

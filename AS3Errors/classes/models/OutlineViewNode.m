@@ -8,59 +8,58 @@
 
 #import "OutlineViewNode.h"
 
-
 @implementation OutlineViewNode
 
 - (id)init
 {
+	return [self initWithValue:nil];
+}
+
+- (id)initWithValue:(NSString*)value
+{
 	if (self = [super init])
-		children = [[NSMutableArray alloc] init];
+		nodeValue = [value copy];
+
 	return self;
 }
 
 - (void)dealloc
 {
-	[parent release];
-	[children release];
+	[nodeValue release];
 	[super dealloc];
-}
+}	
 
-- (NSInteger)indexOfChild:(OutlineViewNode*)child
-{
-	return [children indexOfObject:child];
-}
-
-- (id)addChild:(id)child
-{
-	[child setParent:self];
-	[children addObject: child];
-	return child;
-}
-
-- (NSArray*)children
-{
-	return children;
-}
-
-- (id)parent
-{
-	return parent;
-}
-
-- (void)setParent:(id)theParent
-{
-	[[self parent] release];
-	parent = theParent;
-}
-
-- (OutlineViewNode*)childAtIndex:(NSInteger)n 
-{
-    return [children objectAtIndex: n];
-}
-
-- (NSInteger)numberOfChildren 
+- (NSInteger)numberOfChildren
 {
 	return [children count];
+}
+
+- (NSInteger)indexOfChild:(id)aChild
+{
+	return [children indexOfObject: aChild];
+}
+
+- (void)addChild:(id)aChild
+{
+	if (children == nil)
+		children = [[NSMutableArray alloc] init];
+
+	[children addObject: aChild];
+}
+
+- (id)childAtIndex:(NSInteger)n
+{
+	return [children objectAtIndex: n];
+}
+
+- (NSString*)nodeValue
+{
+	return nodeValue;
+}
+
+- (void)markAsInvalid
+{
+	isValid = NO;
 }
 
 @end

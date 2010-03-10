@@ -7,14 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "OutlineViewNode.h";
-#import "CompilerMessage.h";
+#import "OutlineViewNode.h"
+#import "CompilerMessage.h"
 
-@interface MessageNode : OutlineViewNode {
-	CompilerMessage* message;
+@interface MessageNode : OutlineViewNode 
+{
+	@private CompilerMessage* message;
+	@private id parent;
 }
-
-- (id)initWithMessage:(CompilerMessage*)aMessage;
+- (id)initWithMessage:(CompilerMessage*)aMessage andParent:(id)aParent;
 - (CompilerMessage*)message;
-
+- (id)parent;
+- (NSString*)messageId;
 @end

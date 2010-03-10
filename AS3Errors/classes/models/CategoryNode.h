@@ -6,13 +6,17 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-#import "OutlineViewNode.h";
+#import <Cocoa/Cocoa.h>;
+#import "OutlineViewNode.h"
+#import "MessageNode.h"
+#import "CompilerMessage.h"
 
-@interface CategoryNode : OutlineViewNode {
-	NSString* nodeValue;
+@interface CategoryNode : OutlineViewNode
+{
+	@private NSMutableDictionary* messageNodes;
+	@private BOOL isSorted;
 }
 
-- (id)initWithValue:(NSString*)value;
+- (MessageNode*)messageNodeForMessage:(CompilerMessage*)aMessage;
 
 @end

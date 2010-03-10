@@ -10,25 +10,7 @@
 #import "CompilerMessage.h";
 #import "RegexKitLite.h";
 
-
-
-/*
-/Users/ede/Desktop/junk/Junk0.as(5): col: 15 Error: Syntax error: expecting rightbrace before semicolon.
-
-i hate my crap;
-             ^
-*/
-// i like this:
-// static NSString* const MESSAGE_REGEX = @"(?m)^(/[^(]+)\\(([0-9]+)\\): col: ([0-9]+) ([^:]+): (.*)\\n\\n(.*)\\n"; //  new
 static NSString* const MESSAGE_REGEX = @"(?m)^(/[^(]+)\\(([0-9]+)\\): col: ([0-9]+) ([^:]+): (.*)\\n\\n(.*)\\n"; //  new
-
-
-
-//static NSString* const MESSAGE_REGEX = @"(?m)^(\\/.*)\\(([0-9]+)\\): col: ([0-9]+) ([^:]+): (.*)\\n+([^\\n]*)";
-/*
-static NSString* const MESSAGE_REGEX = @"(?m)^(\\/.*)\\(([0-9]+)\\): col: ([0-9]+) ([^:]+): (.*)[\\s\\n]+(.*)"; // old
-static NSString* const MESSAGE_REGEX = @"(?m)^(\\/[^(]+)\\(([0-9]+)\\): col: ([0-9]+) ([^:]+): (.*)\\n\\n(.*)\\n"; //  new
-*/
 
 @implementation OutputParser
 
@@ -43,17 +25,8 @@ static NSString* const MESSAGE_REGEX = @"(?m)^(\\/[^(]+)\\(([0-9]+)\\): col: ([0
 
 - (void) addToBuffer:(NSString*)aString
 {
-//	NSArray* match = [buffer captureComponentsMatchedByRegex:@"(?m)^(.*)\\n+"];
-//	NSLog(@"line to add: %@", aString);
-
-
 	buffer = [NSMutableString stringWithFormat:@"%@%@", buffer, aString];
 	[buffer replaceOccurrencesOfRegex:@"[\\r\\f]+" withString:@""];
-	
-	NSLog(@"BUFFER:\n%@", buffer);
-	// NSArray* match = [buffer captureComponentsMatchedByRegex:@"(?m)^(.*)\\n+"];
-	// 
-	// 	NSLog(@"------- to buffer: %@", match);
 }
 
 - (void) clearBuffer

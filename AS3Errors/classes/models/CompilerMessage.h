@@ -8,8 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-
-@interface CompilerMessage : NSObject {
+@interface CompilerMessage : NSObject <NSCopying> 
+{
 	NSString* file;
 	NSInteger row;
 	NSInteger column;
@@ -26,5 +26,7 @@
 @property (copy, nonatomic) NSString* lineOfCode;
 
 - (id) initWithFile: (NSString*)aFile row:(NSInteger)aRow column:(NSInteger)aColumn type:(NSString*)aType descriptionText:(NSString*)aDescription lineOfCode:(NSString*)aLineOfCode;
+- (NSString*)messageId;
++ (NSString*)generateMessageId:(CompilerMessage*)aMessage;
 
 @end

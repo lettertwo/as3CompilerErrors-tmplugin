@@ -7,15 +7,12 @@
 //
 
 #import "ErrorsViewController.h"
-#import "OutlineViewNode.h"
 #import "MessageCell.h"
-#import "MessageNode.h"
-#import "CategoryNode.h"
 #import "CompilerMessage.h"
+#import "CategoryNode.h"
+#import "MessageNode.h"
 
 @implementation ErrorsViewController
-
-
 
 @synthesize dataSource;
 
@@ -23,9 +20,9 @@
 {
 	if (self = [super init])
 	{
-		[self setDataSource:[NSMutableArray array]];
+		[self setDataSource:[NSMutableDictionary dictionary]];
 
-		// Add an observer to monitor compiler start.
+		//Add an observer to monitor compiler start.
 		[[NSNotificationCenter defaultCenter] addObserver: self
 			selector: @selector(startNotificationHandler:)
 			name: @"start"
@@ -43,10 +40,9 @@
 	return self;
 }
 
+#pragma mark -
+#pragma mark Data Provider Methods
 
-//
-// data provider methods
-//
 - (NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item 
 {
 	return item == nil ? [dataSource count] : [item numberOfChildren];
@@ -54,19 +50,12 @@
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item 
 {
-	return [item numberOfChildren] > 0;
+	return [item isKindOfClass:[CategoryNode class]] ? YES : NO;
 }
 
 - (id)outlineView:(NSOutlineView *)outlineView child:(NSInteger)index ofItem:(id)item 
 {
-	if (item == nil)
-	{
-		return [dataSource objectForKey: [[dataSource allKeys] objectAtIndex: index]];
-	}
-	else
-	{
-		return [item childAtIndex: index];
-	}
+	return (item == nil) ? [dataSource objectForKey: [[dataSource allKeys] objectAtIndex: index]] : [item childAtIndex: index];
 }
 
 - (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item 
@@ -74,70 +63,12 @@
 	return (id)[item nodeValue];
 }
 
-
-//
-// notification handlers
-//
-
-- (void)startNotificationHandler:(NSNotification*)notification
-{
-	[dataSource removeAllObjects];
-	[view reloadData];
-}
-
-- (void)errorNotificationHandler:(NSNotification*)notification
-{
-	NSMutableArray* results = [[notification userInfo] objectForKey:@"results"];
-	CategoryNode* categoryNode = nil;
-	
-	for (unsigned int index = 0; index < [results count]; index++)
-	{
-		id msg = [results objectAtIndex:index];
-		NSString* key = [msg file];
-		
-		categoryNode = [[self dataSource] objectForKey: key];
-		
-		if (categoryNode == nil)
-		{
-			categoryNode = [[CategoryNode alloc] initWithValue: key];
-			[[self dataSource] setObject: categoryNode forKey: key];
-		}
-		[categoryNode addChild: [[MessageNode alloc] initWithMessage: msg]];
-	}
-	
-	
-// 	OutlineViewNode* categoryNode = nil;
-// 
-// 	for (unsigned int index = 0; index < [results count]; index++)
-// 	{
-// 		id msg = [results objectAtIndex:index];
-// // TODO: If caegory exists, add to it. Else, create.
-// 		if (categoryNode == nil)
-// 		{
-// 			categoryNode = [[CategoryNode alloc] initWithValue: [msg file]];
-// 			[[self dataSource] addObject: categoryNode];
-// 		}
-// 		[categoryNode addChild: [[MessageNode alloc] initWithMessage: msg]];
-// 	}
-
-	[view reloadData];
-}
-
-
-/**
- *
- */
 - (void)outlineView:(NSOutlineView *)outlineView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item
 {
 	if ([cell isKindOfClass:[MessageCell class]])
 		[cell setDataSource:item];
 }
 
-
-
-/**
- *
- */
 - (CGFloat)outlineView: (NSOutlineView *)outlineView heightOfRowByItem:(id)item
 {
 	CGFloat height;
@@ -154,9 +85,6 @@ height = 63;
 
 	return height;
 
-
-	
-	
 	/*
         // Get column for Tweet Status
         NSTableColumn *column = [tv tableColumnWithIdentifier:@"text"];
@@ -178,24 +106,49 @@ height = 63;
 */
 }
 
+#pragma mark -
+#pragma mark Notification Handlers
 
-// - (void)addTestData
-// {
-// 	NSMutableArray* messages = [NSMutableArray array];
-// 	for (unsigned int i = 0; i < 3; i++)
-// 	{
-// 		CompilerMessage* msg = [[CompilerMessage alloc]
-// 			initWithFile:[NSString stringWithFormat:@"/Users/matthew/Desktop/My Class - %d", i]
-// 			row:105
-// 			column:6
-// 			type:@"Error"
-// 			descriptionText:@"There is an error in your code."
-// 			lineOfCode:@"      i = 6;"];
-// 		[messages addObject:msg];
-// 	}
-// 	
-// 	[[NSNotificationCenter defaultCenter] postNotificationName:@"resultsAvailable" object:nil userInfo:[NSDictionary dictionaryWithObject:messages forKey:@"results"]];
-// }
+- (void)startNotificationHandler:(NSNotification*)notification
+{
+	NSEnumerator *enumerator = [dataSource objectEnumerator];
+	id value;
+	while ((value = [enumerator nextObject])) 
+		[value markAsInvalid];
+
+	[view reloadData];
+}
+
+- (void)errorNotificationHandler:(NSNotification*)notification
+{
+	NSArray* results = [[notification userInfo] objectForKey:@"results"];
+	CategoryNode* categoryNode = nil;
+	MessageNode* messageNode = nil;
+	
+	for (unsigned int index = 0; index < [results count]; index++)
+	{
+		id msg = [results objectAtIndex:index];
+		NSString* key = [msg file];
+		
+		// Get the category for this message.
+		categoryNode = [dataSource objectForKey: key];
+		if (categoryNode == nil)
+		{
+			categoryNode = [[CategoryNode alloc] initWithValue: key];
+			[dataSource setObject: categoryNode forKey: key];
+		}
+
+		// Add the message to the category, if it isn't added already.
+		messageNode = [categoryNode messageNodeForMessage: msg];
+		if (messageNode == nil)
+		{
+			messageNode = [[MessageNode alloc] initWithMessage: msg andParent: categoryNode];
+			[categoryNode addChild: messageNode];
+		}
+	}
+
+	[view reloadData];
+}
 
 @end
 

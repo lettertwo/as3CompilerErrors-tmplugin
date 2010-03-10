@@ -26,7 +26,6 @@
 
 - (IBAction)clear:(id)sender
 {
-	NSLog(@"CLEAR!!!!!")	;
 	NSTextStorage* textStorage = [view textStorage];
 	[textStorage beginEditing];
 	[textStorage deleteCharactersInRange:NSMakeRange(0, [textStorage length])];

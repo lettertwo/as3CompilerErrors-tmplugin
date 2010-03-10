@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>classes/controllers/ErrorsViewController.m</string>
+	<string>classes/models/CategoryNode.m</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,75 +21,79 @@
 	<integer>335</integer>
 	<key>metaData</key>
 	<dict>
-		<key>classes/controllers/CompilerController.m</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>1</integer>
-				<key>line</key>
-				<integer>29</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>classes/controllers/ConsoleViewController.m</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>9</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>1</integer>
-		</dict>
 		<key>classes/controllers/ErrorsViewController.h</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>38</integer>
+				<integer>52</integer>
 				<key>line</key>
-				<integer>16</integer>
+				<integer>22</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>47</integer>
+				<key>line</key>
+				<integer>22</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>52</integer>
+				<key>line</key>
+				<integer>22</integer>
+			</dict>
 		</dict>
 		<key>classes/controllers/ErrorsViewController.m</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>46</integer>
 				<key>line</key>
-				<integer>64</integer>
+				<integer>141</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>43</integer>
+			<integer>106</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>30</integer>
+				<key>line</key>
+				<integer>141</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>51</integer>
+				<key>line</key>
+				<integer>141</integer>
+			</dict>
 		</dict>
 		<key>classes/helpers/Compiler.m</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>39</integer>
+				<integer>78</integer>
 				<key>line</key>
-				<integer>36</integer>
+				<integer>62</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>36</integer>
+			<integer>49</integer>
 		</dict>
 		<key>classes/helpers/OutputParser.m</key>
 		<dict>
@@ -98,12 +102,124 @@
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>93</integer>
+				<integer>28</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>56</integer>
+			<integer>4</integer>
+		</dict>
+		<key>classes/models/CategoryNode.h</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>41</integer>
+				<key>line</key>
+				<integer>13</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>classes/models/CategoryNode.m</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>131</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>89</integer>
+		</dict>
+		<key>classes/models/CompilerMessage.h</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>26</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>classes/models/CompilerMessage.m</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>17</integer>
+				<key>line</key>
+				<integer>16</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>classes/models/MessageNode.h</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>13</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>classes/models/MessageNode.m</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>28</integer>
+				<key>line</key>
+				<integer>36</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>classes/models/OutlineViewNode.h</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>5</integer>
+				<key>line</key>
+				<integer>22</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>classes/models/OutlineViewNode.m</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>28</integer>
+				<key>line</key>
+				<integer>46</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>13</integer>
 		</dict>
 		<key>classes/views/MessageCell.m</key>
 		<dict>
@@ -112,27 +228,33 @@
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>173</integer>
+				<integer>13</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>143</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>classes/controllers/ErrorsViewController.h</string>
 		<string>classes/controllers/ErrorsViewController.m</string>
-		<string>classes/controllers/ConsoleViewController.m</string>
-		<string>classes/helpers/OutputParser.m</string>
-		<string>classes/views/MessageCell.m</string>
-		<string>classes/controllers/CompilerController.m</string>
 		<string>classes/helpers/Compiler.m</string>
+		<string>classes/controllers/ErrorsViewController.h</string>
+		<string>classes/views/MessageCell.m</string>
+		<string>classes/helpers/OutputParser.m</string>
+		<string>classes/models/OutlineViewNode.m</string>
+		<string>classes/models/OutlineViewNode.h</string>
+		<string>classes/models/CompilerMessage.m</string>
+		<string>classes/models/MessageNode.h</string>
+		<string>classes/models/MessageNode.m</string>
+		<string>classes/models/CategoryNode.h</string>
+		<string>classes/models/CategoryNode.m</string>
+		<string>classes/models/CompilerMessage.h</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<false/>
 	<key>windowFrame</key>
-	<string>{{198, 205}, {1440, 874}}</string>
+	<string>{{36, 281}, {1440, 874}}</string>
 </dict>
 </plist>

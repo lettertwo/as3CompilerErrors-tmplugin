@@ -11,25 +11,30 @@
 
 @implementation MessageNode
 
-- (id)initWithMessage:(CompilerMessage*)aMessage
+- (id)initWithMessage:(CompilerMessage*)aMessage andParent:(id)aParent
 {
-	if (self = [super init])
+	if (self = [super initWithValue: [aMessage descriptionText]])
 	{
 		message = aMessage;
-		children = [[NSMutableArray alloc] init];
+		parent = aParent;
 	}
 
 	return self;
 }
 
-- (NSString*)nodeValue
-{
-	return [message descriptionText];
-}
-
 - (CompilerMessage*)message
 {
 	return message;
+}
+
+- (id)parent
+{
+	return parent;
+}
+
+- (NSString*)messageId
+{
+	return [message messageId];
 }
 
 @end
