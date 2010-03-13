@@ -129,7 +129,7 @@
 		if (children != nil)
 			[children release];
 
-		children = [[NSMutableArray alloc] initWithArray: [messageNodes objectsForKeys: sortedKeys notFoundMarker: NSNotFound]];
+		children = [[NSMutableArray alloc] initWithArray: [messageNodes objectsForKeys: sortedKeys notFoundMarker: nil]];
 
 		isSorted = YES;
 	}

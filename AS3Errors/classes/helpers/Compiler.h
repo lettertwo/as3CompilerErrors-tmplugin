@@ -11,15 +11,11 @@
 
 
 @interface Compiler : NSObject {
-	NSString* compilerPath;
 	@private OutputParser* parser;
+	@private NSTask* task;
 }
 
-@property (nonatomic, copy) NSString* compilerPath;
-
-- (id)init;
-- (id)initWithCompilerPath:(NSString*)path;
-- (void)compile;
+- (void)compile:(NSString*)aFilePath;
 - (void)dealloc;
 
 @end

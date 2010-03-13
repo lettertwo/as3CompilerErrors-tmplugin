@@ -22,5 +22,7 @@
 - (void)addChild:(id)aChild;
 - (id)childAtIndex:(NSInteger)n;
 - (void)markAsInvalid;
+- (void)validateNow;
+- (BOOL)isValid;
 
 @end

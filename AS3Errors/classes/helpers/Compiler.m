@@ -8,62 +8,94 @@
 
 #import "Compiler.h"
 #import "OutputParser.h"
+#import "OakTextViewProxy.h"
+
+static NSString* compilerPath;
 
 @implementation Compiler
-@synthesize compilerPath;
+
+#pragma mark -
+#pragma mark Init Methods
+
+
++ (void)initialize
+{
+	compilerPath = [[NSBundle pathForResource: @"fcshctl-mxmlc" ofType: nil inDirectory: [[NSBundle bundleForClass: [self class]] bundlePath]] copy];
+}
 
 - (id)init
 {
-	NSString* defaultCompilerPath = [NSBundle pathForResource: @"fcshctl-mxmlc" ofType: nil 
-		inDirectory: [[NSBundle bundleForClass: [self class]] bundlePath]];
-
-	return [self initWithCompilerPath: defaultCompilerPath];
-}
-
-- (id)initWithCompilerPath:(NSString*)path
-{
-	if ([super init])
-		compilerPath = path;
-
+	if (self = [super init])
+	{
+		// Create the output parser.
+		// TODO: Move parser to CompilerController.
+		parser = [[OutputParser alloc] init];
+	}
 	return self;
 }
 
-- (void)compile
+-(void)dealloc
 {
+	if (task != nil)
+		[task release];
+
+	[parser release];
+	[super dealloc];
+}
+
+#pragma mark -
+#pragma mark Public Methods
+- (void)compile:(NSString*)aFilePath
+{
+	// TODO: stop task if it is running currently.
+	if (task != nil)
+	{
+		if ([task isRunning])
+			[task terminate];
+
+		[task release];
+		task = nil;
+	}
+	
+	// Remove the fcshctl log file, if it exists.
+	if ([[NSFileManager defaultManager] isReadableFileAtPath: @"/tmp/fcshctl_screen_log"])
+	    [[NSFileManager defaultManager] removeFileAtPath: @"/tmp/fcshctl_screen_log" handler: nil];
+	
+	// Get the target file.
+	NSString* sourcePath = aFilePath;
+	
 	// Create a task to run the compiler in the background.
-	NSTask* task = [[[NSTask alloc] init] autorelease];
-	[task setLaunchPath: compilerPath];
-	
+	task = [[NSTask alloc] init];
+ 	[task setLaunchPath: compilerPath];
+
 	// Set the arguments for the compiler.
-	NSArray* args = [NSArray arrayWithObjects:@"/Users/ede/Desktop/junk/Doc.as", nil];
+	NSArray* args = [NSArray arrayWithObjects: @"mxmlc", sourcePath, nil];
 	[task setArguments: args];
-	
+
 	// Create a pipe to capture the output.
 	NSPipe* outputPipe = [NSPipe pipe];
 	[task setStandardOutput: outputPipe];
-	
+
 	// Get the output pipe's file handle.
 	NSFileHandle* outputHandle = [outputPipe fileHandleForReading];
-	
+
 	// Add an observer to monitor the file handle.
 	[[NSNotificationCenter defaultCenter] addObserver: self 
 		selector: @selector(outputHandleNotificationHandler:) 
 		name: NSFileHandleReadCompletionNotification 
 		object: outputHandle
 	];
-	
-	// Create the output parser.
-	parser = [[OutputParser alloc] init];
 
 	[outputHandle readInBackgroundAndNotify];
-	
 	[task launch];
 
 	// Notify observers that compile started.
 	[[NSNotificationCenter defaultCenter] postNotificationName: @"start" object: nil];
-	NSLog(@"Compiling...");
+	NSLog(@"Compiling %@...", sourcePath);
 }
 
+#pragma mark -
+#pragma mark Notification Handlers
 
 - (void)outputHandleNotificationHandler:(NSNotification*)notification
 {
@@ -80,7 +112,6 @@
 
 		// Notify observers of the output.
 		[[NSNotificationCenter defaultCenter] postNotificationName: @"output" object: str];
-//		NSLog(@"%@\n", str);
 	}
 	else
 	{
@@ -90,18 +121,13 @@
 		];
 
 		[parser clearBuffer];
-		[parser release];
+		[task release];
+		task = nil;
 
 		// Notify observers that compile completed.
 		[[NSNotificationCenter defaultCenter] postNotificationName: @"complete" object: nil];
 		NSLog(@"Compile Complete.");
 	}
-}
-
-
--(void)dealloc
-{
-	[super dealloc];
 }
 
 @end

@@ -62,4 +62,15 @@
 	isValid = NO;
 }
 
+// Override this method to define how the node is validated.
+- (void)validateNow
+{
+	isValid = YES;
+}
+
+- (BOOL)isValid
+{
+	return isValid;
+}
+
 @end

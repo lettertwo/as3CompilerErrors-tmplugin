@@ -15,6 +15,9 @@
 		3499C65111438EF500776DD2 /* MessagesTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C64C11438EF500776DD2 /* MessagesTable.m */; };
 		3499C65211438EF500776DD2 /* MessagesTableColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3499C64E11438EF500776DD2 /* MessagesTableColumn.m */; };
 		3499C65E11438F8F00776DD2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3499C65D11438F8F00776DD2 /* MainMenu.xib */; };
+		740A12CD114ABD3400138A99 /* AutoCompilationMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 740A12CC114ABD3400138A99 /* AutoCompilationMonitor.m */; };
+		74260F76114989BE00E0C53A /* PaletteWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 74260F75114989BE00E0C53A /* PaletteWindow.m */; };
+		74260FBA1149A67400E0C53A /* OakTextViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74260FB91149A67400E0C53A /* OakTextViewProxy.m */; };
 		74851EF411484AF80002C748 /* MessageNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 74851EF311484AF80002C748 /* MessageNode.m */; };
 		7492ED94114545100062AF1C /* fcshctl-mxmlc-ni in Resources */ = {isa = PBXBuildFile; fileRef = 7492ED91114545100062AF1C /* fcshctl-mxmlc-ni */; };
 		7492ED95114545100062AF1C /* fcshctl-mxmlc in Resources */ = {isa = PBXBuildFile; fileRef = 7492ED92114545100062AF1C /* fcshctl-mxmlc */; };
@@ -50,6 +53,13 @@
 		3499C64D11438EF500776DD2 /* MessagesTableColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesTableColumn.h; sourceTree = "<group>"; };
 		3499C64E11438EF500776DD2 /* MessagesTableColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesTableColumn.m; sourceTree = "<group>"; };
 		3499C65D11438F8F00776DD2 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		740A12CB114ABD3400138A99 /* AutoCompilationMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCompilationMonitor.h; sourceTree = "<group>"; };
+		740A12CC114ABD3400138A99 /* AutoCompilationMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCompilationMonitor.m; sourceTree = "<group>"; };
+		740A1386114ACC8900138A99 /* CompilerControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompilerControllerProtocol.h; sourceTree = "<group>"; };
+		74260F74114989BE00E0C53A /* PaletteWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaletteWindow.h; sourceTree = "<group>"; };
+		74260F75114989BE00E0C53A /* PaletteWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaletteWindow.m; sourceTree = "<group>"; };
+		74260FB81149A67400E0C53A /* OakTextViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OakTextViewProxy.h; sourceTree = "<group>"; };
+		74260FB91149A67400E0C53A /* OakTextViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OakTextViewProxy.m; sourceTree = "<group>"; };
 		74851EF211484AF80002C748 /* MessageNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageNode.h; sourceTree = "<group>"; };
 		74851EF311484AF80002C748 /* MessageNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageNode.m; sourceTree = "<group>"; };
 		7492ED91114545100062AF1C /* fcshctl-mxmlc-ni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "fcshctl-mxmlc-ni"; sourceTree = "<group>"; };
@@ -152,6 +162,8 @@
 				3499C64C11438EF500776DD2 /* MessagesTable.m */,
 				3499C64D11438EF500776DD2 /* MessagesTableColumn.h */,
 				3499C64E11438EF500776DD2 /* MessagesTableColumn.m */,
+				74260F74114989BE00E0C53A /* PaletteWindow.h */,
+				74260F75114989BE00E0C53A /* PaletteWindow.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -182,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				74AEC1A51143576900B31661 /* CompilerController.h */,
+				740A1386114ACC8900138A99 /* CompilerControllerProtocol.h */,
 				74AEC1A61143576900B31661 /* CompilerController.m */,
 				74AEC1A71143576900B31661 /* ConsoleViewController.h */,
 				74AEC1A81143576900B31661 /* ConsoleViewController.m */,
@@ -197,7 +210,11 @@
 				74AEC1B01143576900B31661 /* Compiler.h */,
 				74AEC1B11143576900B31661 /* Compiler.m */,
 				74AEC1B41143576900B31661 /* OutputParser.h */,
+				740A12CB114ABD3400138A99 /* AutoCompilationMonitor.h */,
+				740A12CC114ABD3400138A99 /* AutoCompilationMonitor.m */,
 				74AEC1B51143576900B31661 /* OutputParser.m */,
+				74260FB81149A67400E0C53A /* OakTextViewProxy.h */,
+				74260FB91149A67400E0C53A /* OakTextViewProxy.m */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -327,6 +344,9 @@
 				3499C65111438EF500776DD2 /* MessagesTable.m in Sources */,
 				3499C65211438EF500776DD2 /* MessagesTableColumn.m in Sources */,
 				74851EF411484AF80002C748 /* MessageNode.m in Sources */,
+				74260F76114989BE00E0C53A /* PaletteWindow.m in Sources */,
+				74260FBA1149A67400E0C53A /* OakTextViewProxy.m in Sources */,
+				740A12CD114ABD3400138A99 /* AutoCompilationMonitor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

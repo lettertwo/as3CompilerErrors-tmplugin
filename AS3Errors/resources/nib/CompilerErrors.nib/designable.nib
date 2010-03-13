@@ -50,7 +50,7 @@
 				<string key="NSWindowRect">{{121, 244}, {763, 540}}</string>
 				<int key="NSWTFlags">1946158080</int>
 				<string key="NSWindowTitle">AS3 Compiler Errors</string>
-				<string key="NSWindowClass">NSWindow</string>
+				<string key="NSWindowClass">PaletteWindow</string>
 				<object class="NSToolbar" key="NSViewClass" id="51522311">
 					<object class="NSMutableString" key="NSToolbarIdentifier">
 						<characters key="NS.bytes">C9C9C225-F219-4E0B-9B5F-C7E5B5DE72CB</characters>
@@ -376,6 +376,7 @@
 														</object>
 														<string key="NSFrameSize">{763, 520}</string>
 														<reference key="NSSuperview" ref="47117294"/>
+														<reference key="NSNextKeyView" ref="329793808"/>
 														<reference key="NSDocView" ref="329793808"/>
 														<reference key="NSBGColor" ref="720370428"/>
 														<int key="NScvFlags">4</int>
@@ -402,6 +403,7 @@
 												</object>
 												<string key="NSFrame">{{0, 20}, {763, 520}}</string>
 												<reference key="NSSuperview" ref="615769828"/>
+												<reference key="NSNextKeyView" ref="150411348"/>
 												<int key="NSsFlags">560</int>
 												<reference key="NSVScroller" ref="61395160"/>
 												<reference key="NSHScroller" ref="548872372"/>
@@ -1369,6 +1371,14 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBUserSource</string>
 						<string key="minorKey"/>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">PaletteWindow</string>
+					<string key="superclassName">NSWindow</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">classes/views/PaletteWindow.h</string>
 					</object>
 				</object>
 			</object>

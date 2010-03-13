@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>classes/models/CategoryNode.m</string>
+	<string>classes/helpers/AutoCompilationMonitor.m</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,35 +21,47 @@
 	<integer>335</integer>
 	<key>metaData</key>
 	<dict>
-		<key>classes/controllers/ErrorsViewController.h</key>
+		<key>classes/controllers/CompilerController.h</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>52</integer>
+				<integer>0</integer>
 				<key>line</key>
 				<integer>22</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-			<key>selectFrom</key>
+		</dict>
+		<key>classes/controllers/CompilerController.m</key>
+		<dict>
+			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>47</integer>
+				<integer>45</integer>
 				<key>line</key>
-				<integer>22</integer>
+				<integer>84</integer>
 			</dict>
-			<key>selectTo</key>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>68</integer>
+		</dict>
+		<key>classes/controllers/CompilerControllerProtocol.h</key>
+		<dict>
+			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>52</integer>
+				<integer>2</integer>
 				<key>line</key>
-				<integer>22</integer>
+				<integer>0</integer>
 			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>classes/controllers/ErrorsViewController.m</key>
 		<dict>
@@ -81,33 +93,61 @@
 				<integer>141</integer>
 			</dict>
 		</dict>
+		<key>classes/helpers/AutoCompilationMonitor.h</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>34</integer>
+				<key>line</key>
+				<integer>17</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>classes/helpers/AutoCompilationMonitor.m</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>14</integer>
+				<key>line</key>
+				<integer>61</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>50</integer>
+		</dict>
+		<key>classes/helpers/Compiler.h</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>36</integer>
+				<key>line</key>
+				<integer>17</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>classes/helpers/Compiler.m</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>78</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>62</integer>
+				<integer>94</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>49</integer>
-		</dict>
-		<key>classes/helpers/OutputParser.m</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>28</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>4</integer>
+			<integer>85</integer>
 		</dict>
 		<key>classes/models/CategoryNode.h</key>
 		<dict>
@@ -117,34 +157,6 @@
 				<integer>41</integer>
 				<key>line</key>
 				<integer>13</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>classes/models/CategoryNode.m</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>131</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>89</integer>
-		</dict>
-		<key>classes/models/CompilerMessage.h</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>26</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -198,9 +210,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>5</integer>
+				<integer>19</integer>
 				<key>line</key>
-				<integer>22</integer>
+				<integer>24</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -212,14 +224,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>28</integer>
+				<integer>22</integer>
 				<key>line</key>
-				<integer>46</integer>
+				<integer>54</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>13</integer>
+			<integer>11</integer>
 		</dict>
 		<key>classes/views/MessageCell.m</key>
 		<dict>
@@ -238,23 +250,17 @@
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>classes/controllers/ErrorsViewController.m</string>
+		<string>classes/controllers/CompilerController.m</string>
+		<string>classes/controllers/CompilerController.h</string>
+		<string>classes/controllers/CompilerControllerProtocol.h</string>
+		<string>classes/helpers/AutoCompilationMonitor.h</string>
+		<string>classes/helpers/AutoCompilationMonitor.m</string>
+		<string>classes/helpers/Compiler.h</string>
 		<string>classes/helpers/Compiler.m</string>
-		<string>classes/controllers/ErrorsViewController.h</string>
-		<string>classes/views/MessageCell.m</string>
-		<string>classes/helpers/OutputParser.m</string>
-		<string>classes/models/OutlineViewNode.m</string>
-		<string>classes/models/OutlineViewNode.h</string>
-		<string>classes/models/CompilerMessage.m</string>
-		<string>classes/models/MessageNode.h</string>
-		<string>classes/models/MessageNode.m</string>
-		<string>classes/models/CategoryNode.h</string>
-		<string>classes/models/CategoryNode.m</string>
-		<string>classes/models/CompilerMessage.h</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<false/>
 	<key>windowFrame</key>
-	<string>{{36, 281}, {1440, 874}}</string>
+	<string>{{102, 165}, {1440, 874}}</string>
 </dict>
 </plist>

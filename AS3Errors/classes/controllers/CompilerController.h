@@ -8,14 +8,20 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Compiler.h"
+#import "AutoCompilationMonitor.h"
+#import "CompilerControllerProtocol.h"
 
-
-@interface CompilerController : NSObject {
-	Compiler* compiler;
+@interface CompilerController:NSObject <CompilerController>
+{
+	@private Compiler* compiler;
+	@private AutoCompilationMonitor* autoCompilationMonitor;
+	@private BOOL isAutoCompilationEnabled;
+	@private NSString* currentFilePath;
 }
 
-@property (nonatomic, retain) Compiler* compiler;
+@property (nonatomic, assign) BOOL isAutoCompilationEnabled;
+@property (nonatomic, copy) NSString *currentFilePath;
 
 - (IBAction)compile:(id)sender;
-- (void)dealloc;
+- (IBAction)toggleAutoCompilation:(id)sender;
 @end
